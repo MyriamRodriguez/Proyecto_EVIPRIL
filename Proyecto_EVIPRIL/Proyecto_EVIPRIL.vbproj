@@ -4,13 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD11F850-9E6B-4884-AABD-3C21A74561E9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <StartupObject>Proyecto_EVIPRIL.Module1</StartupObject>
+    <ProjectGuid>{7EA44389-1F4D-4851-94EE-A2788F5FD525}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Proyecto_EVIPRIL.My.MyApplication</StartupObject>
     <RootNamespace>Proyecto_EVIPRIL</RootNamespace>
-    <AssemblyName>Proyecto EVIPRIL</AssemblyName>
+    <AssemblyName>Proyecto_EVIPRIL</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>Console</MyType>
+    <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Proyecto EVIPRIL.xml</DocumentationFile>
+    <DocumentationFile>Proyecto_EVIPRIL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Proyecto EVIPRIL.xml</DocumentationFile>
+    <DocumentationFile>Proyecto_EVIPRIL.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -50,6 +50,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -62,13 +64,22 @@
     <Import Include="System.Collections" />
     <Import Include="System.Collections.Generic" />
     <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
     <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
     <Import Include="System.Linq" />
     <Import Include="System.Xml.Linq" />
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="Form\InicioSesion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\InicioSesion.Designer.vb">
+      <DependentUpon>InicioSesion.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Identificador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -84,13 +95,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Form\PantallaPrincipal.Designer.vb">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PantallaPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulos\Sha1.vb" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\InicioSesion.resx">
+      <DependentUpon>InicioSesion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PantallaPrincipal.resx">
+      <DependentUpon>PantallaPrincipal.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
