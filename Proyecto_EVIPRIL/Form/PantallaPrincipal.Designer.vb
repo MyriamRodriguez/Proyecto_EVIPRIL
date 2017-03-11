@@ -43,7 +43,8 @@ Partial Class PantallaPrincipal
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.PictureBox10 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.LblNombre = New System.Windows.Forms.Label()
+        Me.LblBienvenido = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -253,27 +254,37 @@ Partial Class PantallaPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.Label1)
+        Me.Panel1.Controls.Add(Me.LblNombre)
+        Me.Panel1.Controls.Add(Me.LblBienvenido)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(778, 58)
         Me.Panel1.TabIndex = 48
         '
-        'Label1
+        'LblNombre
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(26, 30)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(233, 24)
-        Me.Label1.TabIndex = 14
-        Me.Label1.Text = "Bienvenido, Nelson Paz"
+        Me.LblNombre.AutoSize = True
+        Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblNombre.Location = New System.Drawing.Point(140, 30)
+        Me.LblNombre.Name = "LblNombre"
+        Me.LblNombre.Size = New System.Drawing.Size(0, 24)
+        Me.LblNombre.TabIndex = 65
+        '
+        'LblBienvenido
+        '
+        Me.LblBienvenido.AutoSize = True
+        Me.LblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblBienvenido.Location = New System.Drawing.Point(27, 30)
+        Me.LblBienvenido.Name = "LblBienvenido"
+        Me.LblBienvenido.Size = New System.Drawing.Size(121, 24)
+        Me.LblBienvenido.TabIndex = 14
+        Me.LblBienvenido.Text = "Bienvenido,"
         '
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(265, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(282, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(46, 44)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -303,6 +314,7 @@ Partial Class PantallaPrincipal
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "PantallaPrincipal"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PantallaPrincipal"
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
@@ -343,6 +355,7 @@ Partial Class PantallaPrincipal
     Friend WithEvents PictureBox13 As PictureBox
     Friend WithEvents PictureBox10 As PictureBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents Label1 As Label
+    Friend WithEvents LblBienvenido As Label
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents LblNombre As Label
 End Class

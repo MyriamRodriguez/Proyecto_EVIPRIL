@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Reporte.designer.vb">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Reporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\InicioSesion.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\Reporte.resx">
+      <DependentUpon>Reporte.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\InicioSesion.resx">
       <DependentUpon>InicioSesion.vb</DependentUpon>
     </EmbeddedResource>

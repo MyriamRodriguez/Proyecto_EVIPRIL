@@ -2,6 +2,7 @@
 Imports System.Data.SqlClient
 Public Class FrmInicioSesion
     Private Sub BtnInisioSesion_Click(sender As Object, e As EventArgs) Handles BtnInisioSesion.Click
+        Dim Nombre As String
         Using cnn As New SqlConnection(My.Settings.ConexionEVIPRIL)
 
             Try
@@ -17,8 +18,10 @@ Public Class FrmInicioSesion
 
                     If reader.HasRows Then
                         reader.Read()
-                        ' UsuarioActivo.NombreCompleto = String.Format("Bienvenido {0} {(1)}", reader.GetValue(1), reader.GetValue(2))
-                        PantallaPrincipal.Show()
+                        'UsuarioActivo.NombreCompleto = String.Format("Bienvenido {0} {(1)}", reader.GetValue(1), reader.GetValue(2))
+                        Identificador.Nombre = TxtUsuario.Text
+                        Dim f As New PantallaPrincipal
+                        f.Show()
                     Else
                         MsgBox("Usuario y contraseña invalido")
                     End If
