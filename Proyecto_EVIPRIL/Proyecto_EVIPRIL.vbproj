@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Empleado.Designer.vb">
+      <DependentUpon>Empleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Empleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Reporte.designer.vb">
       <DependentUpon>Reporte.vb</DependentUpon>
     </Compile>
@@ -85,6 +91,7 @@
       <DependentUpon>InicioSesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Modulos\Empleado.vb" />
     <Compile Include="Modulos\Identificador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -116,6 +123,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\Empleado.resx">
+      <DependentUpon>Empleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Reporte.resx">
       <DependentUpon>Reporte.vb</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +156,15 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1489292273_Streamline-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1489292326_BT_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1489292297_arrow-back.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
