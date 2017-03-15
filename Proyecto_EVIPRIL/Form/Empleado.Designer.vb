@@ -30,6 +30,8 @@ Partial Class FrmEmpleado
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.BtnInicio = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.txtNumCuenta = New System.Windows.Forms.TextBox()
         Me.txtTelefono = New System.Windows.Forms.TextBox()
@@ -44,8 +46,6 @@ Partial Class FrmEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnGuardar = New System.Windows.Forms.Button()
-        Me.BtnInicio = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -123,6 +123,30 @@ Partial Class FrmEmpleado
         Me.GroupBox1.Size = New System.Drawing.Size(621, 104)
         Me.GroupBox1.TabIndex = 56
         Me.GroupBox1.TabStop = False
+        '
+        'btnGuardar
+        '
+        Me.btnGuardar.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292326_BT_save
+        Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnGuardar.FlatAppearance.BorderSize = 0
+        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnGuardar.Location = New System.Drawing.Point(280, 23)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(58, 58)
+        Me.btnGuardar.TabIndex = 19
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'BtnInicio
+        '
+        Me.BtnInicio.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292273_Streamline_18
+        Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnInicio.FlatAppearance.BorderSize = 0
+        Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnInicio.Location = New System.Drawing.Point(93, 23)
+        Me.BtnInicio.Name = "BtnInicio"
+        Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
+        Me.BtnInicio.TabIndex = 18
+        Me.BtnInicio.UseVisualStyleBackColor = True
         '
         'btnSalir
         '
@@ -249,30 +273,6 @@ Partial Class FrmEmpleado
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Numero de Identidad:"
         '
-        'btnGuardar
-        '
-        Me.btnGuardar.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292326_BT_save
-        Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnGuardar.FlatAppearance.BorderSize = 0
-        Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Location = New System.Drawing.Point(280, 23)
-        Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(58, 58)
-        Me.btnGuardar.TabIndex = 19
-        Me.btnGuardar.UseVisualStyleBackColor = True
-        '
-        'BtnInicio
-        '
-        Me.BtnInicio.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292273_Streamline_18
-        Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnInicio.FlatAppearance.BorderSize = 0
-        Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInicio.Location = New System.Drawing.Point(93, 23)
-        Me.BtnInicio.Name = "BtnInicio"
-        Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
-        Me.BtnInicio.TabIndex = 18
-        Me.BtnInicio.UseVisualStyleBackColor = True
-        '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -300,6 +300,7 @@ Partial Class FrmEmpleado
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmEmpleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Empleado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
