@@ -91,6 +91,12 @@
       <DependentUpon>InicioSesion.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Inventario.Designer.vb">
+      <DependentUpon>Inventario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulos\Empleado.vb" />
     <Compile Include="Modulos\Identificador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Reportes.resx">
       <DependentUpon>Reportes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Inventario.resx">
+      <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

@@ -30,14 +30,7 @@ Partial Class PantallaPrincipal
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
@@ -46,6 +39,19 @@ Partial Class PantallaPrincipal
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.LblBienvenido = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,12 +59,6 @@ Partial Class PantallaPrincipal
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label9
@@ -130,66 +130,6 @@ Partial Class PantallaPrincipal
         Me.Label3.TabIndex = 60
         Me.Label3.Text = "Contrato"
         '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(459, 91)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(121, 121)
-        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox9.TabIndex = 59
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(601, 91)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(121, 121)
-        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox8.TabIndex = 58
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(459, 238)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(121, 121)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox7.TabIndex = 57
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(601, 238)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(121, 121)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox6.TabIndex = 56
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(309, 91)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(121, 121)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox5.TabIndex = 55
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(309, 238)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(121, 121)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 53
-        Me.PictureBox4.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -199,16 +139,6 @@ Partial Class PantallaPrincipal
         Me.Label2.Size = New System.Drawing.Size(89, 20)
         Me.Label2.TabIndex = 51
         Me.Label2.Text = "Empleado"
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(57, 126)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(155, 172)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 50
-        Me.PictureBox3.TabStop = False
         '
         'Panel2
         '
@@ -291,10 +221,81 @@ Partial Class PantallaPrincipal
         Me.PictureBox2.TabIndex = 16
         Me.PictureBox2.TabStop = False
         '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = CType(resources.GetObject("PictureBox9.Image"), System.Drawing.Image)
+        Me.PictureBox9.Location = New System.Drawing.Point(459, 91)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(121, 121)
+        Me.PictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox9.TabIndex = 59
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = CType(resources.GetObject("PictureBox8.Image"), System.Drawing.Image)
+        Me.PictureBox8.Location = New System.Drawing.Point(601, 91)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(121, 121)
+        Me.PictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox8.TabIndex = 58
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = CType(resources.GetObject("PictureBox7.Image"), System.Drawing.Image)
+        Me.PictureBox7.Location = New System.Drawing.Point(459, 238)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(121, 121)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox7.TabIndex = 57
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(601, 238)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(121, 121)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox6.TabIndex = 56
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = CType(resources.GetObject("PictureBox5.Image"), System.Drawing.Image)
+        Me.PictureBox5.Location = New System.Drawing.Point(309, 91)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(121, 121)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox5.TabIndex = 55
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(309, 238)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(121, 121)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 53
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(57, 126)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(155, 172)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 50
+        Me.PictureBox3.TabStop = False
+        '
         'PantallaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 478)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
@@ -316,13 +317,6 @@ Partial Class PantallaPrincipal
         Me.Name = "PantallaPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "PantallaPrincipal"
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
@@ -330,6 +324,13 @@ Partial Class PantallaPrincipal
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -162,6 +162,7 @@ Partial Class FrmInicioSesion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(387, 358)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -172,6 +173,7 @@ Partial Class FrmInicioSesion
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.MaximizeBox = False
         Me.Name = "FrmInicioSesion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio Sesión"
