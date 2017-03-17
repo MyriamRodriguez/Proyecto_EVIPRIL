@@ -72,6 +72,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Cliente.Designer.vb">
+      <DependentUpon>Cliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Cliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Empleado.Designer.vb">
       <DependentUpon>Empleado.vb</DependentUpon>
     </Compile>
@@ -97,7 +103,7 @@
     <Compile Include="Form\Inventario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulos\Empleado.vb" />
+    <Compile Include="Modulos\Conexion.vb" />
     <Compile Include="Modulos\Identificador.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -135,6 +141,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form\Cliente.resx">
+      <DependentUpon>Cliente.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Empleado.resx">
       <DependentUpon>Empleado.vb</DependentUpon>
     </EmbeddedResource>
