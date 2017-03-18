@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Reportes
+Partial Class FrmReportes
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -22,7 +22,7 @@ Partial Class Reportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Reportes))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReportes))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
@@ -32,7 +32,7 @@ Partial Class Reportes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtFiltrar = New System.Windows.Forms.ComboBox()
         Me.TxtOrdenarPor = New System.Windows.Forms.ComboBox()
-        Me.DGReporte = New System.Windows.Forms.DataGridView()
+        Me.DgvReporte = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblReporte = New System.Windows.Forms.Label()
         Me.Panel2.SuspendLayout()
@@ -40,7 +40,7 @@ Partial Class Reportes
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DGReporte, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvReporte, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -132,13 +132,13 @@ Partial Class Reportes
         Me.TxtOrdenarPor.Size = New System.Drawing.Size(164, 21)
         Me.TxtOrdenarPor.TabIndex = 10
         '
-        'DGReporte
+        'DgvReporte
         '
-        Me.DGReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DGReporte.Location = New System.Drawing.Point(76, 174)
-        Me.DGReporte.Name = "DGReporte"
-        Me.DGReporte.Size = New System.Drawing.Size(827, 294)
-        Me.DGReporte.TabIndex = 9
+        Me.DgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvReporte.Location = New System.Drawing.Point(76, 174)
+        Me.DgvReporte.Name = "DgvReporte"
+        Me.DgvReporte.Size = New System.Drawing.Size(827, 294)
+        Me.DgvReporte.TabIndex = 9
         '
         'Panel1
         '
@@ -159,7 +159,7 @@ Partial Class Reportes
         Me.LblReporte.TabIndex = 0
         Me.LblReporte.Text = "Reporte"
         '
-        'Reportes
+        'FrmReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -170,9 +170,9 @@ Partial Class Reportes
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TxtFiltrar)
         Me.Controls.Add(Me.TxtOrdenarPor)
-        Me.Controls.Add(Me.DGReporte)
+        Me.Controls.Add(Me.DgvReporte)
         Me.Controls.Add(Me.Panel1)
-        Me.Name = "Reportes"
+        Me.Name = "FrmReportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes"
         Me.Panel2.ResumeLayout(False)
@@ -180,7 +180,7 @@ Partial Class Reportes
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DGReporte, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvReporte, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -197,7 +197,7 @@ Partial Class Reportes
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtFiltrar As ComboBox
     Friend WithEvents TxtOrdenarPor As ComboBox
-    Friend WithEvents DGReporte As DataGridView
+    Friend WithEvents DgvReporte As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LblReporte As Label
 End Class

@@ -29,7 +29,7 @@ Partial Class Reporte
         Me.PbxAtras = New System.Windows.Forms.PictureBox()
         Me.PbxEmpleado = New System.Windows.Forms.PictureBox()
         Me.PbxCliente = New System.Windows.Forms.PictureBox()
-        Me.PbxReporte = New System.Windows.Forms.PictureBox()
+        Me.PbxContrato = New System.Windows.Forms.PictureBox()
         Me.PbxInventario = New System.Windows.Forms.PictureBox()
         Me.PbxPlanilla = New System.Windows.Forms.PictureBox()
         Me.PbxPrestaciones = New System.Windows.Forms.PictureBox()
@@ -44,7 +44,7 @@ Partial Class Reporte
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxCliente, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxReporte, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PbxContrato, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxInventario, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxPlanilla, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxPrestaciones, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,15 +110,15 @@ Partial Class Reporte
         Me.PbxCliente.TabIndex = 3
         Me.PbxCliente.TabStop = False
         '
-        'PbxReporte
+        'PbxContrato
         '
-        Me.PbxReporte.Image = CType(resources.GetObject("PbxReporte.Image"), System.Drawing.Image)
-        Me.PbxReporte.Location = New System.Drawing.Point(139, 96)
-        Me.PbxReporte.Name = "PbxReporte"
-        Me.PbxReporte.Size = New System.Drawing.Size(112, 92)
-        Me.PbxReporte.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PbxReporte.TabIndex = 4
-        Me.PbxReporte.TabStop = False
+        Me.PbxContrato.Image = CType(resources.GetObject("PbxContrato.Image"), System.Drawing.Image)
+        Me.PbxContrato.Location = New System.Drawing.Point(139, 96)
+        Me.PbxContrato.Name = "PbxContrato"
+        Me.PbxContrato.Size = New System.Drawing.Size(112, 92)
+        Me.PbxContrato.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PbxContrato.TabIndex = 4
+        Me.PbxContrato.TabStop = False
         '
         'PbxInventario
         '
@@ -225,7 +225,7 @@ Partial Class Reporte
         Me.Controls.Add(Me.PbxPrestaciones)
         Me.Controls.Add(Me.PbxPlanilla)
         Me.Controls.Add(Me.PbxInventario)
-        Me.Controls.Add(Me.PbxReporte)
+        Me.Controls.Add(Me.PbxContrato)
         Me.Controls.Add(Me.PbxCliente)
         Me.Controls.Add(Me.PbxEmpleado)
         Me.Controls.Add(Me.Panel2)
@@ -239,7 +239,7 @@ Partial Class Reporte
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxCliente, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxReporte, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PbxContrato, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxInventario, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxPlanilla, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxPrestaciones, System.ComponentModel.ISupportInitialize).EndInit()
@@ -254,7 +254,7 @@ Partial Class Reporte
     Friend WithEvents PbxEmpleado As PictureBox
     Friend WithEvents PbxAtras As PictureBox
     Friend WithEvents PbxCliente As PictureBox
-    Friend WithEvents PbxReporte As PictureBox
+    Friend WithEvents PbxContrato As PictureBox
     Friend WithEvents PbxInventario As PictureBox
     Friend WithEvents PbxPlanilla As PictureBox
     Friend WithEvents PbxPrestaciones As PictureBox
