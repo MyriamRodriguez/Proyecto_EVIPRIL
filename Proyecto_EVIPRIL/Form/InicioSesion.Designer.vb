@@ -68,15 +68,16 @@ Partial Class FrmInicioSesion
         '
         Me.TxtContraseña.Location = New System.Drawing.Point(162, 237)
         Me.TxtContraseña.Name = "TxtContraseña"
+        Me.TxtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TxtContraseña.Size = New System.Drawing.Size(197, 20)
-        Me.TxtContraseña.TabIndex = 33
+        Me.TxtContraseña.TabIndex = 1
         '
         'TxtUsuario
         '
         Me.TxtUsuario.Location = New System.Drawing.Point(162, 203)
         Me.TxtUsuario.Name = "TxtUsuario"
         Me.TxtUsuario.Size = New System.Drawing.Size(197, 20)
-        Me.TxtUsuario.TabIndex = 32
+        Me.TxtUsuario.TabIndex = 0
         '
         'Label3
         '
@@ -110,7 +111,7 @@ Partial Class FrmInicioSesion
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
         Me.Panel2.Controls.Add(Me.LinkLabel1)
         Me.Panel2.Controls.Add(Me.BtnInisioSesion)
         Me.Panel2.Location = New System.Drawing.Point(0, 302)
@@ -141,7 +142,7 @@ Partial Class FrmInicioSesion
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Location = New System.Drawing.Point(0, -4)
         Me.Panel1.Name = "Panel1"

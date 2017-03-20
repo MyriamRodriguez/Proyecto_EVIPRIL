@@ -29,7 +29,6 @@ Partial Class FrmEmpleado
         Me.dtpFechaNacimiento = New System.Windows.Forms.DateTimePicker()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.btnGuardar = New System.Windows.Forms.Button()
         Me.BtnInicio = New System.Windows.Forms.Button()
         Me.btnSalir = New System.Windows.Forms.Button()
@@ -46,8 +45,9 @@ Partial Class FrmEmpleado
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'cboEstadoCivil
@@ -97,7 +97,7 @@ Partial Class FrmEmpleado
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label13)
-        Me.Panel1.Location = New System.Drawing.Point(0, 18)
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(948, 63)
         Me.Panel1.TabIndex = 57
@@ -112,25 +112,13 @@ Partial Class FrmEmpleado
         Me.Label13.TabIndex = 0
         Me.Label13.Text = "Empleado"
         '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.GroupBox1.Controls.Add(Me.btnGuardar)
-        Me.GroupBox1.Controls.Add(Me.BtnInicio)
-        Me.GroupBox1.Controls.Add(Me.btnSalir)
-        Me.GroupBox1.Location = New System.Drawing.Point(154, 428)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(621, 104)
-        Me.GroupBox1.TabIndex = 56
-        Me.GroupBox1.TabStop = False
-        '
         'btnGuardar
         '
         Me.btnGuardar.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292326_BT_save
         Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Location = New System.Drawing.Point(280, 23)
+        Me.btnGuardar.Location = New System.Drawing.Point(412, 7)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(58, 58)
         Me.btnGuardar.TabIndex = 19
@@ -142,7 +130,7 @@ Partial Class FrmEmpleado
         Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnInicio.FlatAppearance.BorderSize = 0
         Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInicio.Location = New System.Drawing.Point(93, 23)
+        Me.BtnInicio.Location = New System.Drawing.Point(192, 2)
         Me.BtnInicio.Name = "BtnInicio"
         Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
         Me.BtnInicio.TabIndex = 18
@@ -154,9 +142,9 @@ Partial Class FrmEmpleado
         Me.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Location = New System.Drawing.Point(470, 23)
+        Me.btnSalir.Location = New System.Drawing.Point(612, 3)
         Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(58, 58)
+        Me.btnSalir.Size = New System.Drawing.Size(60, 69)
         Me.btnSalir.TabIndex = 17
         Me.btnSalir.UseVisualStyleBackColor = True
         '
@@ -273,19 +261,30 @@ Partial Class FrmEmpleado
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Numero de Identidad:"
         '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnSalir)
+        Me.Panel2.Controls.Add(Me.btnGuardar)
+        Me.Panel2.Controls.Add(Me.BtnInicio)
+        Me.Panel2.Location = New System.Drawing.Point(0, 473)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(948, 75)
+        Me.Panel2.TabIndex = 58
+        '
         'FrmEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(948, 550)
+        Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.cboEstadoCivil)
         Me.Controls.Add(Me.cboProfesion)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.dtpFechaNacimiento)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtNumCuenta)
         Me.Controls.Add(Me.txtTelefono)
         Me.Controls.Add(Me.txtDireccion)
@@ -304,7 +303,7 @@ Partial Class FrmEmpleado
         Me.Text = "Empleado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -317,7 +316,6 @@ Partial Class FrmEmpleado
     Friend WithEvents dtpFechaNacimiento As DateTimePicker
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label13 As Label
-    Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents btnGuardar As Button
     Friend WithEvents BtnInicio As Button
     Friend WithEvents btnSalir As Button
@@ -334,4 +332,5 @@ Partial Class FrmEmpleado
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents Panel2 As Panel
 End Class

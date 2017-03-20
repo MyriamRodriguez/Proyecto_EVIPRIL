@@ -31,4 +31,39 @@ Public Class FrmInicioSesion
             End Try
         End Using
     End Sub
+
+    Private Sub TxtUsuario_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtUsuario.KeyPress
+        If Char.IsLetter(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+
+        If Asc(e.KeyChar) = 13 Then
+            TxtContraseña.Focus()
+
+        End If
+
+
+    End Sub
+
+    Private Sub TxtContraseña_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtContraseña.KeyPress
+        If Char.IsNumber(e.KeyChar) Then
+            e.Handled = False
+
+        ElseIf Char.IsControl(e.KeyChar) Then
+            e.Handled = False
+        ElseIf Char.IsSeparator(e.KeyChar) Then
+            e.Handled = False
+        Else e.Handled = True
+        End If
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Registrar.Show()
+    End Sub
 End Class

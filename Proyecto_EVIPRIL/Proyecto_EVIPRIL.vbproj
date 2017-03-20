@@ -139,6 +139,12 @@
     <Compile Include="Form\Planilla.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\Registrar.Designer.vb">
+      <DependentUpon>Registrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Registrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Form\Cliente.resx">
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Planilla.resx">
       <DependentUpon>Planilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Registrar.resx">
+      <DependentUpon>Registrar.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

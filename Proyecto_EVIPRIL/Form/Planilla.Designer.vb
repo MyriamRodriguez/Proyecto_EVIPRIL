@@ -39,6 +39,11 @@ Partial Class FrmPlanilla
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TxtNombreEmpleado = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PbxCalcular = New System.Windows.Forms.PictureBox()
+        Me.PbxImprimir = New System.Windows.Forms.PictureBox()
+        Me.PbxHome = New System.Windows.Forms.PictureBox()
+        Me.PbxAtras = New System.Windows.Forms.PictureBox()
+        Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -54,11 +59,6 @@ Partial Class FrmPlanilla
         Me.TxtNumIdentidad = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PbxCalcular = New System.Windows.Forms.PictureBox()
-        Me.PbxImprimir = New System.Windows.Forms.PictureBox()
-        Me.PbxHome = New System.Windows.Forms.PictureBox()
-        Me.PbxAtras = New System.Windows.Forms.PictureBox()
-        Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxCalcular, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,7 +184,7 @@ Partial Class FrmPlanilla
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label15)
         Me.Panel1.Location = New System.Drawing.Point(0, -1)
         Me.Panel1.Name = "Panel1"
@@ -211,7 +211,7 @@ Partial Class FrmPlanilla
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
         Me.Panel2.Controls.Add(Me.PbxCalcular)
         Me.Panel2.Controls.Add(Me.PbxImprimir)
         Me.Panel2.Controls.Add(Me.PbxHome)
@@ -221,6 +221,56 @@ Partial Class FrmPlanilla
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(984, 70)
         Me.Panel2.TabIndex = 59
+        '
+        'PbxCalcular
+        '
+        Me.PbxCalcular.Image = CType(resources.GetObject("PbxCalcular.Image"), System.Drawing.Image)
+        Me.PbxCalcular.Location = New System.Drawing.Point(456, 8)
+        Me.PbxCalcular.Name = "PbxCalcular"
+        Me.PbxCalcular.Size = New System.Drawing.Size(58, 58)
+        Me.PbxCalcular.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxCalcular.TabIndex = 10
+        Me.PbxCalcular.TabStop = False
+        '
+        'PbxImprimir
+        '
+        Me.PbxImprimir.Image = CType(resources.GetObject("PbxImprimir.Image"), System.Drawing.Image)
+        Me.PbxImprimir.Location = New System.Drawing.Point(618, 8)
+        Me.PbxImprimir.Name = "PbxImprimir"
+        Me.PbxImprimir.Size = New System.Drawing.Size(58, 58)
+        Me.PbxImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxImprimir.TabIndex = 9
+        Me.PbxImprimir.TabStop = False
+        '
+        'PbxHome
+        '
+        Me.PbxHome.Image = CType(resources.GetObject("PbxHome.Image"), System.Drawing.Image)
+        Me.PbxHome.Location = New System.Drawing.Point(164, 5)
+        Me.PbxHome.Name = "PbxHome"
+        Me.PbxHome.Size = New System.Drawing.Size(58, 58)
+        Me.PbxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxHome.TabIndex = 8
+        Me.PbxHome.TabStop = False
+        '
+        'PbxAtras
+        '
+        Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
+        Me.PbxAtras.Location = New System.Drawing.Point(768, 13)
+        Me.PbxAtras.Name = "PbxAtras"
+        Me.PbxAtras.Size = New System.Drawing.Size(53, 53)
+        Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxAtras.TabIndex = 7
+        Me.PbxAtras.TabStop = False
+        '
+        'PbxGuardar
+        '
+        Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
+        Me.PbxGuardar.Location = New System.Drawing.Point(308, 10)
+        Me.PbxGuardar.Name = "PbxGuardar"
+        Me.PbxGuardar.Size = New System.Drawing.Size(53, 53)
+        Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PbxGuardar.TabIndex = 6
+        Me.PbxGuardar.TabStop = False
         '
         'Label14
         '
@@ -369,56 +419,6 @@ Partial Class FrmPlanilla
         Me.Label1.Size = New System.Drawing.Size(153, 16)
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Número de Identidad"
-        '
-        'PbxCalcular
-        '
-        Me.PbxCalcular.Image = CType(resources.GetObject("PbxCalcular.Image"), System.Drawing.Image)
-        Me.PbxCalcular.Location = New System.Drawing.Point(456, 8)
-        Me.PbxCalcular.Name = "PbxCalcular"
-        Me.PbxCalcular.Size = New System.Drawing.Size(58, 58)
-        Me.PbxCalcular.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxCalcular.TabIndex = 10
-        Me.PbxCalcular.TabStop = False
-        '
-        'PbxImprimir
-        '
-        Me.PbxImprimir.Image = CType(resources.GetObject("PbxImprimir.Image"), System.Drawing.Image)
-        Me.PbxImprimir.Location = New System.Drawing.Point(618, 8)
-        Me.PbxImprimir.Name = "PbxImprimir"
-        Me.PbxImprimir.Size = New System.Drawing.Size(58, 58)
-        Me.PbxImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxImprimir.TabIndex = 9
-        Me.PbxImprimir.TabStop = False
-        '
-        'PbxHome
-        '
-        Me.PbxHome.Image = CType(resources.GetObject("PbxHome.Image"), System.Drawing.Image)
-        Me.PbxHome.Location = New System.Drawing.Point(164, 5)
-        Me.PbxHome.Name = "PbxHome"
-        Me.PbxHome.Size = New System.Drawing.Size(58, 58)
-        Me.PbxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxHome.TabIndex = 8
-        Me.PbxHome.TabStop = False
-        '
-        'PbxAtras
-        '
-        Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(768, 13)
-        Me.PbxAtras.Name = "PbxAtras"
-        Me.PbxAtras.Size = New System.Drawing.Size(53, 53)
-        Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxAtras.TabIndex = 7
-        Me.PbxAtras.TabStop = False
-        '
-        'PbxGuardar
-        '
-        Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
-        Me.PbxGuardar.Location = New System.Drawing.Point(308, 10)
-        Me.PbxGuardar.Name = "PbxGuardar"
-        Me.PbxGuardar.Size = New System.Drawing.Size(53, 53)
-        Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxGuardar.TabIndex = 6
-        Me.PbxGuardar.TabStop = False
         '
         'FrmPlanilla
         '
