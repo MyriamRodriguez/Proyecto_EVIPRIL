@@ -30,4 +30,8 @@
     Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
         FrmCliente.Show()
     End Sub
+
+    Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
+        FrmInventario.Show()
+    End Sub
 End Class

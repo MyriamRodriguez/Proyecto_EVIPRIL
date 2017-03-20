@@ -20,14 +20,14 @@ Public Class FrmReportes
 
     End Sub
     Public Sub MostrarDatosPlanilla()
-        da = New SqlDataAdapter("Select * from Planilla", cnn)
+        da = New SqlDataAdapter("select p.SueldoDiario,p.DiasTrabajados,p.SueldoQuincenal,p.Complemento,p.SubTotal,p.IHSS,p.DeduccionUniforme,p.RAP,p.OtrasDeducciones,p.TotalDeducciones,p.NetoPagar,p.NumIdentidad,c.fecha,c.horaentrada,c.horasalida,c.NumIdentidad from Planilla P inner join Controlempleado C on P.idcontrolemp = C.idcontrolemp ", cnn)
         dt = New DataTable
         da.Fill(dt)
         DgvReporte.DataSource = dt
 
     End Sub
     Public Sub MostrarDatosInventario()
-        da = New SqlDataAdapter("Select * from InventarioArmas", cnn)
+        da = New SqlDataAdapter("select i.Serie,i.Calibre,i.Fabricacion, t.TipoArma, m.Modelo from InventarioArmas I inner join TipoArma T on  I.IdTipoArma = t.IdTipoArma inner join Modelo M on i.IdModelo = M.IdModelo", cnn)
         dt = New DataTable
         da.Fill(dt)
         DgvReporte.DataSource = dt
@@ -54,17 +54,124 @@ Public Class FrmReportes
     Private Sub Reportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If sele = 1 Then
             MostrarDatosEmpleado()
+            LlenarOrdenarEmpleado()
         ElseIf sele = 2 Then
             MostrarDatosPlanilla()
+            LlenarOrdenarPlanilla()
         ElseIf sele = 3 Then
             MostrarDatosInventario()
+            LlenarOrdenarIventario()
         ElseIf sele = 4 Then
             MostrarDatosCliente()
+            LlenarOrdenarCliente()
         ElseIf sele = 5 Then
             MostrarDatosPrestaciones()
         ElseIf sele = 6 Then
             MostrarDatosContrato()
         End If
 
+    End Sub
+
+    Private Sub TxtOrdenarPor_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboOrdenar.SelectedIndexChanged
+        Dim i As Integer
+        i = CboOrdenar.SelectedIndex
+        Select Case i
+            Case 0
+                If sele = 1 Then
+                    OrdenarNombre()
+                ElseIf sele = 2 Then
+                    OrdenarSueldoDiario()
+                ElseIf sele = 3 Then
+                    OrdenarSerie()
+                ElseIf sele = 4 Then
+                    OrdenarCompañia()
+                End If
+            Case 1
+                If sele = 1 Then
+                    OrdenarApellido()
+                ElseIf sele = 2 Then
+                    OrdenarDiasTrabajados()
+                ElseIf sele = 3 Then
+                    OrdenarFabricacion()
+                ElseIf sele = 4 Then
+                    OrdenarContacto()
+                End If
+
+        End Select
+    End Sub
+
+    Public Sub OrdenarNombre()
+        da = New SqlDataAdapter("Select * from Empleado order by Nombres", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+    Public Sub OrdenarApellido()
+        da = New SqlDataAdapter("Select * from Empleado order by Apellidos", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+    Public Sub OrdenarNumeroIdentidad()
+        da = New SqlDataAdapter("Select * from Empleado order by NumIdentidad", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+
+    Private Sub LlenarOrdenarEmpleado()
+        CboOrdenar.Items.Add("Nombre")
+        CboOrdenar.Items.Add("Numero de Identidad")
+    End Sub
+    Private Sub LlenarOrdenarCliente()
+        CboOrdenar.Items.Add("Nombre Compañia")
+        CboOrdenar.Items.Add("Nombre Contacto")
+    End Sub
+    Private Sub LlenarOrdenarIventario()
+        CboOrdenar.Items.Add("Serie")
+        CboOrdenar.Items.Add("Fabricacion")
+    End Sub
+    Private Sub LlenarOrdenarPlanilla()
+        CboOrdenar.Items.Add("Sueldo Diario")
+        CboOrdenar.Items.Add("Dias Trabajado")
+    End Sub
+
+
+    Public Sub OrdenarSueldoDiario()
+        da = New SqlDataAdapter("select p.SueldoDiario,p.DiasTrabajados,p.SueldoQuincenal,p.Complemento,p.SubTotal,p.IHSS,p.DeduccionUniforme,p.RAP,p.OtrasDeducciones,p.TotalDeducciones,p.NetoPagar,p.NumIdentidad,c.fecha,c.horaentrada,c.horasalida,c.NumIdentidad from Planilla P inner join Controlempleado C on P.idcontrolemp = C.idcontrolemp  order by P.SueldoDiario", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+    Public Sub OrdenarDiasTrabajados()
+        da = New SqlDataAdapter("select p.SueldoDiario,p.DiasTrabajados,p.SueldoQuincenal,p.Complemento,p.SubTotal,p.IHSS,p.DeduccionUniforme,p.RAP,p.OtrasDeducciones,p.TotalDeducciones,p.NetoPagar,p.NumIdentidad,c.fecha,c.horaentrada,c.horasalida,c.NumIdentidad from Planilla P inner join Controlempleado C on P.idcontrolemp = C.idcontrolemp  order by P.DiasTrabajados", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+    Public Sub OrdenarSerie()
+        da = New SqlDataAdapter("select i.Serie,i.Calibre,i.Fabricacion, t.TipoArma, m.Modelo from InventarioArmas I inner join TipoArma T on  I.IdTipoArma = t.IdTipoArma inner join Modelo M on i.IdModelo = M.IdModelo order by I.Serie", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+    Public Sub OrdenarFabricacion()
+        da = New SqlDataAdapter("select i.Serie,i.Calibre,i.Fabricacion, t.TipoArma, m.Modelo from InventarioArmas I inner join TipoArma T on  I.IdTipoArma = t.IdTipoArma inner join Modelo M on i.IdModelo = M.IdModelo order by i.Fabricacion", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+
+    Public Sub OrdenarCompañia()
+        da = New SqlDataAdapter("Select * from Clientes order by NombreCompañia", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
+    End Sub
+    Public Sub OrdenarContacto()
+        da = New SqlDataAdapter("Select * from Clientes order by NombreContacto", cnn)
+        dt = New DataTable
+        da.Fill(dt)
+        DgvReporte.DataSource = dt
     End Sub
 End Class

@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Inventario
+Partial Class FrmInventario
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,20 +22,17 @@ Partial Class Inventario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Inventario))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInventario))
         Me.Cbomarca = New System.Windows.Forms.ComboBox()
         Me.Cbomodelo = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Txttipoarma = New System.Windows.Forms.TextBox()
         Me.Txtfabricacion = New System.Windows.Forms.TextBox()
         Me.Txtserie = New System.Windows.Forms.TextBox()
-        Me.Txtcodigo = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.tBtninicio = New System.Windows.Forms.PictureBox()
         Me.Btnguardar = New System.Windows.Forms.PictureBox()
@@ -43,6 +40,7 @@ Partial Class Inventario
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Txtcalibre = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.CboTipoArma = New System.Windows.Forms.ComboBox()
         Me.Panel2.SuspendLayout()
         CType(Me.tBtninicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btnguardar, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,7 +51,7 @@ Partial Class Inventario
         'Cbomarca
         '
         Me.Cbomarca.FormattingEnabled = True
-        Me.Cbomarca.Location = New System.Drawing.Point(224, 293)
+        Me.Cbomarca.Location = New System.Drawing.Point(223, 278)
         Me.Cbomarca.Name = "Cbomarca"
         Me.Cbomarca.Size = New System.Drawing.Size(121, 21)
         Me.Cbomarca.TabIndex = 44
@@ -61,7 +59,7 @@ Partial Class Inventario
         'Cbomodelo
         '
         Me.Cbomodelo.FormattingEnabled = True
-        Me.Cbomodelo.Location = New System.Drawing.Point(224, 255)
+        Me.Cbomodelo.Location = New System.Drawing.Point(223, 240)
         Me.Cbomodelo.Name = "Cbomodelo"
         Me.Cbomodelo.Size = New System.Drawing.Size(121, 21)
         Me.Cbomodelo.TabIndex = 43
@@ -70,45 +68,31 @@ Partial Class Inventario
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(167, 294)
+        Me.Label8.Location = New System.Drawing.Point(166, 279)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(51, 16)
         Me.Label8.TabIndex = 42
         Me.Label8.Text = "Marca"
         '
-        'Txttipoarma
-        '
-        Me.Txttipoarma.Location = New System.Drawing.Point(224, 220)
-        Me.Txttipoarma.Name = "Txttipoarma"
-        Me.Txttipoarma.Size = New System.Drawing.Size(121, 20)
-        Me.Txttipoarma.TabIndex = 41
-        '
         'Txtfabricacion
         '
-        Me.Txtfabricacion.Location = New System.Drawing.Point(224, 188)
+        Me.Txtfabricacion.Location = New System.Drawing.Point(223, 173)
         Me.Txtfabricacion.Name = "Txtfabricacion"
         Me.Txtfabricacion.Size = New System.Drawing.Size(121, 20)
         Me.Txtfabricacion.TabIndex = 40
         '
         'Txtserie
         '
-        Me.Txtserie.Location = New System.Drawing.Point(224, 115)
+        Me.Txtserie.Location = New System.Drawing.Point(223, 100)
         Me.Txtserie.Name = "Txtserie"
         Me.Txtserie.Size = New System.Drawing.Size(121, 20)
         Me.Txtserie.TabIndex = 38
-        '
-        'Txtcodigo
-        '
-        Me.Txtcodigo.Location = New System.Drawing.Point(224, 77)
-        Me.Txtcodigo.Name = "Txtcodigo"
-        Me.Txtcodigo.Size = New System.Drawing.Size(121, 20)
-        Me.Txtcodigo.TabIndex = 37
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(158, 256)
+        Me.Label7.Location = New System.Drawing.Point(157, 241)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(60, 16)
         Me.Label7.TabIndex = 36
@@ -118,7 +102,7 @@ Partial Class Inventario
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(117, 221)
+        Me.Label6.Location = New System.Drawing.Point(116, 206)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(101, 16)
         Me.Label6.TabIndex = 35
@@ -128,7 +112,7 @@ Partial Class Inventario
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(128, 189)
+        Me.Label5.Location = New System.Drawing.Point(127, 174)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(90, 16)
         Me.Label5.TabIndex = 34
@@ -138,7 +122,7 @@ Partial Class Inventario
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(160, 150)
+        Me.Label4.Location = New System.Drawing.Point(159, 135)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(58, 16)
         Me.Label4.TabIndex = 33
@@ -148,21 +132,11 @@ Partial Class Inventario
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(167, 116)
+        Me.Label3.Location = New System.Drawing.Point(166, 101)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(45, 16)
         Me.Label3.TabIndex = 32
         Me.Label3.Text = "Serie"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(98, 78)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 16)
-        Me.Label2.TabIndex = 30
-        Me.Label2.Text = "Codigo de Arma"
         '
         'Panel2
         '
@@ -220,7 +194,7 @@ Partial Class Inventario
         '
         'Txtcalibre
         '
-        Me.Txtcalibre.Location = New System.Drawing.Point(224, 149)
+        Me.Txtcalibre.Location = New System.Drawing.Point(223, 134)
         Me.Txtcalibre.Name = "Txtcalibre"
         Me.Txtcalibre.Size = New System.Drawing.Size(121, 20)
         Me.Txtcalibre.TabIndex = 39
@@ -235,29 +209,35 @@ Partial Class Inventario
         Me.Panel1.Size = New System.Drawing.Size(544, 70)
         Me.Panel1.TabIndex = 29
         '
-        'Inventario
+        'CboTipoArma
+        '
+        Me.CboTipoArma.FormattingEnabled = True
+        Me.CboTipoArma.Location = New System.Drawing.Point(223, 206)
+        Me.CboTipoArma.Name = "CboTipoArma"
+        Me.CboTipoArma.Size = New System.Drawing.Size(121, 21)
+        Me.CboTipoArma.TabIndex = 45
+        '
+        'FrmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(536, 408)
+        Me.Controls.Add(Me.CboTipoArma)
         Me.Controls.Add(Me.Cbomarca)
         Me.Controls.Add(Me.Cbomodelo)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Txttipoarma)
         Me.Controls.Add(Me.Txtfabricacion)
         Me.Controls.Add(Me.Txtserie)
-        Me.Controls.Add(Me.Txtcodigo)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Txtcalibre)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
-        Me.Name = "Inventario"
+        Me.Name = "FrmInventario"
         Me.Text = "Inventario"
         Me.Panel2.ResumeLayout(False)
         CType(Me.tBtninicio, System.ComponentModel.ISupportInitialize).EndInit()
@@ -275,19 +255,17 @@ Partial Class Inventario
     Friend WithEvents Cbomarca As ComboBox
     Friend WithEvents Cbomodelo As ComboBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Txttipoarma As TextBox
     Friend WithEvents Btnguardar As PictureBox
     Friend WithEvents Txtfabricacion As TextBox
     Friend WithEvents Txtserie As TextBox
-    Friend WithEvents Txtcodigo As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Txtcalibre As TextBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents CboTipoArma As ComboBox
 End Class

@@ -12,7 +12,7 @@ Public Class FrmEmpleado
         Try
             Using cmd As New SqlCommand
                 With cmd
-                    .CommandText = "CargarProfesion"
+                    .CommandText = "CargarProfesion2"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cnn
                 End With
@@ -35,7 +35,7 @@ Public Class FrmEmpleado
         Try
             Using cmd As New SqlCommand
                 With cmd
-                    .CommandText = "CargarEstadoCivil"
+                    .CommandText = "CargarEstadoCivil1"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cnn
                 End With

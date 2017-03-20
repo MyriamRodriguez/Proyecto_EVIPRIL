@@ -31,7 +31,7 @@ Partial Class FrmReportes
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtFiltrar = New System.Windows.Forms.ComboBox()
-        Me.TxtOrdenarPor = New System.Windows.Forms.ComboBox()
+        Me.CboOrdenar = New System.Windows.Forms.ComboBox()
         Me.DgvReporte = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblReporte = New System.Windows.Forms.Label()
@@ -124,13 +124,13 @@ Partial Class FrmReportes
         Me.TxtFiltrar.Size = New System.Drawing.Size(164, 21)
         Me.TxtFiltrar.TabIndex = 11
         '
-        'TxtOrdenarPor
+        'CboOrdenar
         '
-        Me.TxtOrdenarPor.FormattingEnabled = True
-        Me.TxtOrdenarPor.Location = New System.Drawing.Point(245, 121)
-        Me.TxtOrdenarPor.Name = "TxtOrdenarPor"
-        Me.TxtOrdenarPor.Size = New System.Drawing.Size(164, 21)
-        Me.TxtOrdenarPor.TabIndex = 10
+        Me.CboOrdenar.FormattingEnabled = True
+        Me.CboOrdenar.Location = New System.Drawing.Point(245, 121)
+        Me.CboOrdenar.Name = "CboOrdenar"
+        Me.CboOrdenar.Size = New System.Drawing.Size(164, 21)
+        Me.CboOrdenar.TabIndex = 10
         '
         'DgvReporte
         '
@@ -169,7 +169,7 @@ Partial Class FrmReportes
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TxtFiltrar)
-        Me.Controls.Add(Me.TxtOrdenarPor)
+        Me.Controls.Add(Me.CboOrdenar)
         Me.Controls.Add(Me.DgvReporte)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmReportes"
@@ -196,7 +196,7 @@ Partial Class FrmReportes
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TxtFiltrar As ComboBox
-    Friend WithEvents TxtOrdenarPor As ComboBox
+    Friend WithEvents CboOrdenar As ComboBox
     Friend WithEvents DgvReporte As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LblReporte As Label
