@@ -57,7 +57,7 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MYLI\SQLEXPRESS;Initial Catalog=SeguridadLeon;Integrated Security=Tru"& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-LH7Q6LF;Initial Catalog=SeguridadLeon;Integrated Security=Tru"& _ 
             "e")>  _
         Public ReadOnly Property ConexionEVIPRIL() As String
             Get

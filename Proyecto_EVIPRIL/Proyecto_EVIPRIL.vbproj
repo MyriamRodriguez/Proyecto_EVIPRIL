@@ -78,6 +78,18 @@
     <Compile Include="Form\Cliente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Form\ContratoCliente.Designer.vb">
+      <DependentUpon>ContratoCliente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ContratoCliente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ContratoEmpleado.Designer.vb">
+      <DependentUpon>ContratoEmpleado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ContratoEmpleado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form\Empleado.Designer.vb">
       <DependentUpon>Empleado.vb</DependentUpon>
     </Compile>
@@ -101,6 +113,12 @@
       <DependentUpon>Inventario.vb</DependentUpon>
     </Compile>
     <Compile Include="Form\Inventario.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TipoContrato.Designer.vb">
+      <DependentUpon>TipoContrato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TipoContrato.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulos\Conexion.vb" />
@@ -150,6 +168,12 @@
     <EmbeddedResource Include="Form\Cliente.resx">
       <DependentUpon>Cliente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\ContratoCliente.resx">
+      <DependentUpon>ContratoCliente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ContratoEmpleado.resx">
+      <DependentUpon>ContratoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Empleado.resx">
       <DependentUpon>Empleado.vb</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TipoContrato.resx">
+      <DependentUpon>TipoContrato.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

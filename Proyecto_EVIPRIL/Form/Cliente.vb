@@ -31,11 +31,11 @@ Public Class FrmCliente
 
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
         Me.Close()
-        PantallaPrincipal.Show()
+        FrmPantallaPrincipal.Show()
     End Sub
 
     Private Sub BtnAtras_Click(sender As Object, e As EventArgs) Handles BtnAtras.Click
         Me.Close()
-        PantallaPrincipal.Show()
+        FrmPantallaPrincipal.Show()
     End Sub
 End Class

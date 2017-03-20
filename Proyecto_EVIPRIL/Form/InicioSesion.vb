@@ -20,7 +20,7 @@ Public Class FrmInicioSesion
                         reader.Read()
                         'UsuarioActivo.NombreCompleto = String.Format("Bienvenido {0} {(1)}", reader.GetValue(1), reader.GetValue(2))
                         Identificador.Nombre = TxtUsuario.Text
-                        Dim f As New PantallaPrincipal
+                        Dim f As New FrmPantallaPrincipal
                         f.Show()
                     Else
                         MsgBox("Usuario y contraseña invalido")

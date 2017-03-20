@@ -24,6 +24,6 @@
     End Sub
 
     Private Sub PbxHome_Click(sender As Object, e As EventArgs) Handles PbxHome.Click
-        PantallaPrincipal.Show()
+        FrmPantallaPrincipal.Show()
     End Sub
 End Class

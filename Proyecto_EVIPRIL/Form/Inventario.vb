@@ -13,6 +13,6 @@
 
     Private Sub tBtninicio_Click(sender As Object, e As EventArgs) Handles tBtninicio.Click
         Close()
-        PantallaPrincipal.Show()
+        FrmPantallaPrincipal.Show()
     End Sub
 End Class

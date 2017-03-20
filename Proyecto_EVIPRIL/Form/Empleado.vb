@@ -97,7 +97,7 @@ Public Class FrmEmpleado
 
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
         Close()
-        PantallaPrincipal.Show()
+        FrmPantallaPrincipal.Show()
     End Sub
 
 End Class

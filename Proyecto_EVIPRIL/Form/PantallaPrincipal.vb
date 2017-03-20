@@ -1,4 +1,4 @@
-﻿Public Class PantallaPrincipal
+﻿Public Class FrmPantallaPrincipal
     Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
         Reporte.Show()
     End Sub
@@ -9,7 +9,8 @@
 
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
-
+        Close()
+        FrmTipoContrato.Show()
     End Sub
 
     Private Sub PictureBox10_Click(sender As Object, e As EventArgs) Handles PictureBox10.Click
