@@ -1,5 +1,6 @@
 ﻿
 Imports System.Data.SqlClient
+
 Public Class FrmEmpleado
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarEstadoCivil()

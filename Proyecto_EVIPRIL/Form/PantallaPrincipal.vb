@@ -7,7 +7,7 @@
         LblNombre.Text = Identificador.Nombre
     End Sub
 
-    ' <<<<<<< HEAD
+
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
 
     End Sub
@@ -16,13 +16,17 @@
 
     End Sub
 
-    ' =======
+
     Private Sub PictureBox9_Click(sender As Object, e As EventArgs) Handles PictureBox9.Click
         FrmPlanilla.Show()
     End Sub
 
     Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click
         FrmEmpleado.Show()
-        '  >>>>>>> 26012660d2f321534ffb70ffe3d6a1d8b76afeae
+
+    End Sub
+
+    Private Sub PictureBox8_Click(sender As Object, e As EventArgs) Handles PictureBox8.Click
+        FrmCliente.Show()
     End Sub
 End Class

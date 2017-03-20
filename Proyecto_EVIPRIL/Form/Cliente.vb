@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class FrmCliente
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
         Call AgregarCliente()
