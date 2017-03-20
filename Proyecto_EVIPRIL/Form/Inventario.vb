@@ -27,6 +27,9 @@ Public Class FrmInventario
         CargarTipoArma()
         CargarModelo()
         CargarMarca()
+        Cbomarca.Text = ""
+        Cbomodelo.Text = ""
+        CboTipoArma.Text = ""
     End Sub
 
     Private Sub CargarTipoArma()
@@ -108,11 +111,8 @@ Public Class FrmInventario
                     .Parameters.Add("@Serie", SqlDbType.NVarChar).Value = Txtserie.Text
                     .Parameters.Add("@Calibre", SqlDbType.NVarChar).Value = Txtcalibre.Text
                     .Parameters.Add("@Fabricacion", SqlDbType.NVarChar).Value = Txtfabricacion.Text
-                    .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CboTipoArma.SelectedIndex
-                    .Parameters.Add("@IdModelo", SqlDbType.Int).Value = Cbomodelo.SelectedIndex
-                    .Parameters.Add("@IdMarca", SqlDbType.Int).Value = Cbomarca.SelectedIndex
-
-
+                    .Parameters.Add("@IdTipoArma", SqlDbType.Int).Value = CboTipoArma.SelectedValue
+                    .Parameters.Add("@IdModelo", SqlDbType.Int).Value = Cbomodelo.SelectedValue
 
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")

@@ -31,17 +31,16 @@ Partial Class FrmContratoEmpleado
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.CboTipoEmpleado = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TxtTipoContrato = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Txtidcontra = New System.Windows.Forms.TextBox()
+        Me.TxtNumIdentidad = New System.Windows.Forms.TextBox()
+        Me.TxtFechaFinal = New System.Windows.Forms.TextBox()
+        Me.TxtFechaInicio = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.CboTipoContrato = New System.Windows.Forms.ComboBox()
+        Me.CboBeneficiario = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -131,48 +130,27 @@ Partial Class FrmContratoEmpleado
         Me.Label9.TabIndex = 67
         Me.Label9.Text = "Tipo de  Empleado"
         '
-        'TextBox6
+        'TxtNumIdentidad
         '
-        Me.TextBox6.Location = New System.Drawing.Point(572, 231)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(144, 20)
-        Me.TextBox6.TabIndex = 66
+        Me.TxtNumIdentidad.Location = New System.Drawing.Point(572, 260)
+        Me.TxtNumIdentidad.Multiline = True
+        Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
+        Me.TxtNumIdentidad.Size = New System.Drawing.Size(144, 20)
+        Me.TxtNumIdentidad.TabIndex = 66
         '
-        'TextBox5
+        'TxtFechaFinal
         '
-        Me.TextBox5.Location = New System.Drawing.Point(572, 188)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(144, 20)
-        Me.TextBox5.TabIndex = 65
+        Me.TxtFechaFinal.Location = New System.Drawing.Point(230, 231)
+        Me.TxtFechaFinal.Name = "TxtFechaFinal"
+        Me.TxtFechaFinal.Size = New System.Drawing.Size(144, 20)
+        Me.TxtFechaFinal.TabIndex = 63
         '
-        'TxtTipoContrato
+        'TxtFechaInicio
         '
-        Me.TxtTipoContrato.Location = New System.Drawing.Point(572, 141)
-        Me.TxtTipoContrato.Name = "TxtTipoContrato"
-        Me.TxtTipoContrato.Size = New System.Drawing.Size(144, 20)
-        Me.TxtTipoContrato.TabIndex = 64
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(230, 272)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(144, 20)
-        Me.TextBox3.TabIndex = 63
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(230, 229)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(144, 20)
-        Me.TextBox2.TabIndex = 62
-        '
-        'Txtidcontra
-        '
-        Me.Txtidcontra.Location = New System.Drawing.Point(230, 185)
-        Me.Txtidcontra.Name = "Txtidcontra"
-        Me.Txtidcontra.Size = New System.Drawing.Size(144, 20)
-        Me.Txtidcontra.TabIndex = 61
+        Me.TxtFechaInicio.Location = New System.Drawing.Point(230, 188)
+        Me.TxtFechaInicio.Name = "TxtFechaInicio"
+        Me.TxtFechaInicio.Size = New System.Drawing.Size(144, 20)
+        Me.TxtFechaInicio.TabIndex = 62
         '
         'Label6
         '
@@ -188,7 +166,7 @@ Partial Class FrmContratoEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(444, 230)
+        Me.Label5.Location = New System.Drawing.Point(444, 259)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 18)
         Me.Label5.TabIndex = 59
@@ -208,7 +186,7 @@ Partial Class FrmContratoEmpleado
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(114, 271)
+        Me.Label3.Location = New System.Drawing.Point(114, 230)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(95, 18)
         Me.Label3.TabIndex = 57
@@ -218,21 +196,44 @@ Partial Class FrmContratoEmpleado
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(87, 231)
+        Me.Label2.Location = New System.Drawing.Point(87, 190)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(122, 18)
         Me.Label2.TabIndex = 56
         Me.Label2.Text = "Fecha de Inicio"
         '
+        'CboTipoContrato
+        '
+        Me.CboTipoContrato.CausesValidation = False
+        Me.CboTipoContrato.FormattingEnabled = True
+        Me.CboTipoContrato.Items.AddRange(New Object() {"Administrativo", "Guardia"})
+        Me.CboTipoContrato.Location = New System.Drawing.Point(572, 140)
+        Me.CboTipoContrato.Name = "CboTipoContrato"
+        Me.CboTipoContrato.Size = New System.Drawing.Size(144, 21)
+        Me.CboTipoContrato.TabIndex = 69
+        Me.CboTipoContrato.Text = "Seleccione...."
+        '
+        'CboBeneficiario
+        '
+        Me.CboBeneficiario.CausesValidation = False
+        Me.CboBeneficiario.FormattingEnabled = True
+        Me.CboBeneficiario.Items.AddRange(New Object() {"Administrativo", "Guardia"})
+        Me.CboBeneficiario.Location = New System.Drawing.Point(572, 187)
+        Me.CboBeneficiario.Name = "CboBeneficiario"
+        Me.CboBeneficiario.Size = New System.Drawing.Size(144, 21)
+        Me.CboBeneficiario.TabIndex = 70
+        Me.CboBeneficiario.Text = "Seleccione...."
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(123, 184)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(457, 230)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(87, 18)
-        Me.Label1.TabIndex = 55
-        Me.Label1.Text = "IdContrato"
+        Me.Label1.Size = New System.Drawing.Size(148, 13)
+        Me.Label1.TabIndex = 71
+        Me.Label1.Text = "Reguistrar Nuevo Beneficiario"
         '
         'FrmContratoEmpleado
         '
@@ -240,20 +241,19 @@ Partial Class FrmContratoEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(777, 429)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.CboBeneficiario)
+        Me.Controls.Add(Me.CboTipoContrato)
         Me.Controls.Add(Me.CboTipoEmpleado)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TxtTipoContrato)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Txtidcontra)
+        Me.Controls.Add(Me.TxtNumIdentidad)
+        Me.Controls.Add(Me.TxtFechaFinal)
+        Me.Controls.Add(Me.TxtFechaInicio)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmContratoEmpleado"
@@ -278,16 +278,15 @@ Partial Class FrmContratoEmpleado
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents CboTipoEmpleado As ComboBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TxtTipoContrato As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Txtidcontra As TextBox
+    Friend WithEvents TxtNumIdentidad As TextBox
+    Friend WithEvents TxtFechaFinal As TextBox
+    Friend WithEvents TxtFechaInicio As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
+    Friend WithEvents CboTipoContrato As ComboBox
+    Friend WithEvents CboBeneficiario As ComboBox
     Friend WithEvents Label1 As Label
 End Class
