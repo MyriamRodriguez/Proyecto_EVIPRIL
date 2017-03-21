@@ -34,7 +34,6 @@ Partial Class FrmPlanilla
         Me.TxtSueldoQ = New System.Windows.Forms.TextBox()
         Me.TxtDiasTrabajados = New System.Windows.Forms.TextBox()
         Me.TxtSueldoDiario = New System.Windows.Forms.TextBox()
-        Me.TxtNumPlanilla = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TxtNombreEmpleado = New System.Windows.Forms.TextBox()
@@ -42,7 +41,6 @@ Partial Class FrmPlanilla
         Me.PbxCalcular = New System.Windows.Forms.PictureBox()
         Me.PbxImprimir = New System.Windows.Forms.PictureBox()
         Me.PbxHome = New System.Windows.Forms.PictureBox()
-        Me.PbxAtras = New System.Windows.Forms.PictureBox()
         Me.PbxGuardar = New System.Windows.Forms.PictureBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -55,7 +53,6 @@ Partial Class FrmPlanilla
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.TxtNumIdentidad = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -64,7 +61,6 @@ Partial Class FrmPlanilla
         CType(Me.PbxCalcular, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxHome, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,7 +68,7 @@ Partial Class FrmPlanilla
         '
         Me.TxtTotalPagar.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.TxtTotalPagar.Enabled = False
-        Me.TxtTotalPagar.Location = New System.Drawing.Point(649, 422)
+        Me.TxtTotalPagar.Location = New System.Drawing.Point(404, 428)
         Me.TxtTotalPagar.Multiline = True
         Me.TxtTotalPagar.Name = "TxtTotalPagar"
         Me.TxtTotalPagar.Size = New System.Drawing.Size(198, 25)
@@ -132,7 +128,7 @@ Partial Class FrmPlanilla
         '
         Me.TxtSubTotal.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.TxtSubTotal.Enabled = False
-        Me.TxtSubTotal.Location = New System.Drawing.Point(200, 422)
+        Me.TxtSubTotal.Location = New System.Drawing.Point(200, 383)
         Me.TxtSubTotal.Multiline = True
         Me.TxtSubTotal.Name = "TxtSubTotal"
         Me.TxtSubTotal.Size = New System.Drawing.Size(198, 25)
@@ -141,7 +137,7 @@ Partial Class FrmPlanilla
         '
         'TxtComplemento
         '
-        Me.TxtComplemento.Location = New System.Drawing.Point(200, 380)
+        Me.TxtComplemento.Location = New System.Drawing.Point(200, 341)
         Me.TxtComplemento.Multiline = True
         Me.TxtComplemento.Name = "TxtComplemento"
         Me.TxtComplemento.Size = New System.Drawing.Size(198, 25)
@@ -151,7 +147,7 @@ Partial Class FrmPlanilla
         '
         Me.TxtSueldoQ.BackColor = System.Drawing.SystemColors.InactiveBorder
         Me.TxtSueldoQ.Enabled = False
-        Me.TxtSueldoQ.Location = New System.Drawing.Point(200, 339)
+        Me.TxtSueldoQ.Location = New System.Drawing.Point(200, 300)
         Me.TxtSueldoQ.Multiline = True
         Me.TxtSueldoQ.Name = "TxtSueldoQ"
         Me.TxtSueldoQ.Size = New System.Drawing.Size(198, 25)
@@ -160,7 +156,7 @@ Partial Class FrmPlanilla
         '
         'TxtDiasTrabajados
         '
-        Me.TxtDiasTrabajados.Location = New System.Drawing.Point(200, 296)
+        Me.TxtDiasTrabajados.Location = New System.Drawing.Point(200, 257)
         Me.TxtDiasTrabajados.Multiline = True
         Me.TxtDiasTrabajados.Name = "TxtDiasTrabajados"
         Me.TxtDiasTrabajados.Size = New System.Drawing.Size(198, 25)
@@ -168,19 +164,11 @@ Partial Class FrmPlanilla
         '
         'TxtSueldoDiario
         '
-        Me.TxtSueldoDiario.Location = New System.Drawing.Point(200, 256)
+        Me.TxtSueldoDiario.Location = New System.Drawing.Point(200, 217)
         Me.TxtSueldoDiario.Multiline = True
         Me.TxtSueldoDiario.Name = "TxtSueldoDiario"
         Me.TxtSueldoDiario.Size = New System.Drawing.Size(198, 25)
         Me.TxtSueldoDiario.TabIndex = 63
-        '
-        'TxtNumPlanilla
-        '
-        Me.TxtNumPlanilla.Location = New System.Drawing.Point(200, 217)
-        Me.TxtNumPlanilla.Multiline = True
-        Me.TxtNumPlanilla.Name = "TxtNumPlanilla"
-        Me.TxtNumPlanilla.Size = New System.Drawing.Size(198, 25)
-        Me.TxtNumPlanilla.TabIndex = 62
         '
         'Panel1
         '
@@ -215,7 +203,6 @@ Partial Class FrmPlanilla
         Me.Panel2.Controls.Add(Me.PbxCalcular)
         Me.Panel2.Controls.Add(Me.PbxImprimir)
         Me.Panel2.Controls.Add(Me.PbxHome)
-        Me.Panel2.Controls.Add(Me.PbxAtras)
         Me.Panel2.Controls.Add(Me.PbxGuardar)
         Me.Panel2.Location = New System.Drawing.Point(0, 475)
         Me.Panel2.Name = "Panel2"
@@ -225,7 +212,7 @@ Partial Class FrmPlanilla
         'PbxCalcular
         '
         Me.PbxCalcular.Image = CType(resources.GetObject("PbxCalcular.Image"), System.Drawing.Image)
-        Me.PbxCalcular.Location = New System.Drawing.Point(456, 8)
+        Me.PbxCalcular.Location = New System.Drawing.Point(518, 12)
         Me.PbxCalcular.Name = "PbxCalcular"
         Me.PbxCalcular.Size = New System.Drawing.Size(58, 58)
         Me.PbxCalcular.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -235,7 +222,7 @@ Partial Class FrmPlanilla
         'PbxImprimir
         '
         Me.PbxImprimir.Image = CType(resources.GetObject("PbxImprimir.Image"), System.Drawing.Image)
-        Me.PbxImprimir.Location = New System.Drawing.Point(618, 8)
+        Me.PbxImprimir.Location = New System.Drawing.Point(680, 12)
         Me.PbxImprimir.Name = "PbxImprimir"
         Me.PbxImprimir.Size = New System.Drawing.Size(58, 58)
         Me.PbxImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -245,27 +232,17 @@ Partial Class FrmPlanilla
         'PbxHome
         '
         Me.PbxHome.Image = CType(resources.GetObject("PbxHome.Image"), System.Drawing.Image)
-        Me.PbxHome.Location = New System.Drawing.Point(164, 5)
+        Me.PbxHome.Location = New System.Drawing.Point(226, 9)
         Me.PbxHome.Name = "PbxHome"
         Me.PbxHome.Size = New System.Drawing.Size(58, 58)
         Me.PbxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PbxHome.TabIndex = 8
         Me.PbxHome.TabStop = False
         '
-        'PbxAtras
-        '
-        Me.PbxAtras.Image = CType(resources.GetObject("PbxAtras.Image"), System.Drawing.Image)
-        Me.PbxAtras.Location = New System.Drawing.Point(768, 13)
-        Me.PbxAtras.Name = "PbxAtras"
-        Me.PbxAtras.Size = New System.Drawing.Size(53, 53)
-        Me.PbxAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PbxAtras.TabIndex = 7
-        Me.PbxAtras.TabStop = False
-        '
         'PbxGuardar
         '
         Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
-        Me.PbxGuardar.Location = New System.Drawing.Point(308, 10)
+        Me.PbxGuardar.Location = New System.Drawing.Point(370, 14)
         Me.PbxGuardar.Name = "PbxGuardar"
         Me.PbxGuardar.Size = New System.Drawing.Size(53, 53)
         Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -276,7 +253,7 @@ Partial Class FrmPlanilla
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(540, 425)
+        Me.Label14.Location = New System.Drawing.Point(295, 431)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(103, 16)
         Me.Label14.TabIndex = 58
@@ -336,7 +313,7 @@ Partial Class FrmPlanilla
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(119, 425)
+        Me.Label8.Location = New System.Drawing.Point(119, 386)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 16)
         Me.Label8.TabIndex = 52
@@ -346,7 +323,7 @@ Partial Class FrmPlanilla
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(90, 383)
+        Me.Label7.Location = New System.Drawing.Point(90, 344)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(103, 16)
         Me.Label7.TabIndex = 51
@@ -356,7 +333,7 @@ Partial Class FrmPlanilla
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(63, 342)
+        Me.Label6.Location = New System.Drawing.Point(63, 303)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(130, 16)
         Me.Label6.TabIndex = 50
@@ -366,7 +343,7 @@ Partial Class FrmPlanilla
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(68, 299)
+        Me.Label5.Location = New System.Drawing.Point(68, 260)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 16)
         Me.Label5.TabIndex = 49
@@ -376,21 +353,11 @@ Partial Class FrmPlanilla
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(90, 259)
+        Me.Label4.Location = New System.Drawing.Point(90, 220)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(103, 16)
         Me.Label4.TabIndex = 48
         Me.Label4.Text = "Sueldo Diario"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(114, 220)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(80, 16)
-        Me.Label3.TabIndex = 47
-        Me.Label3.Text = "Planilla N°"
         '
         'TxtNumIdentidad
         '
@@ -437,7 +404,6 @@ Partial Class FrmPlanilla
         Me.Controls.Add(Me.TxtSueldoQ)
         Me.Controls.Add(Me.TxtDiasTrabajados)
         Me.Controls.Add(Me.TxtSueldoDiario)
-        Me.Controls.Add(Me.TxtNumPlanilla)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtNombreEmpleado)
         Me.Controls.Add(Me.Panel2)
@@ -452,7 +418,6 @@ Partial Class FrmPlanilla
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TxtNumIdentidad)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -464,7 +429,6 @@ Partial Class FrmPlanilla
         CType(Me.PbxCalcular, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxHome, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -481,7 +445,6 @@ Partial Class FrmPlanilla
     Friend WithEvents TxtSueldoQ As TextBox
     Friend WithEvents TxtDiasTrabajados As TextBox
     Friend WithEvents TxtSueldoDiario As TextBox
-    Friend WithEvents TxtNumPlanilla As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label15 As Label
     Friend WithEvents TxtNombreEmpleado As TextBox
@@ -497,13 +460,11 @@ Partial Class FrmPlanilla
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents TxtNumIdentidad As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PbxCalcular As PictureBox
     Friend WithEvents PbxImprimir As PictureBox
     Friend WithEvents PbxHome As PictureBox
-    Friend WithEvents PbxAtras As PictureBox
     Friend WithEvents PbxGuardar As PictureBox
 End Class

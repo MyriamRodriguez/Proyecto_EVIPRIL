@@ -17,6 +17,13 @@
         TotalDeduc = Ihss + DeducUniforme + Rap + OtrasDeduc
         TotalPagar = SubTotal - TotalDeduc
 
+        TxtSueldoQ.Text = SueldoQuincenal.ToString
+        TxtSubTotal.Text = SubTotal.ToString
+        TxtIhss.Text = Ihss.ToString
+        TxtRap.Text = Rap.ToString
+        TxtTotalDeduc.Text = TotalDeduc.ToString
+        TxtTotalPagar.Text = TotalPagar.ToString
+
     End Sub
 
     Private Sub PbxCalcular_Click(sender As Object, e As EventArgs) Handles PbxCalcular.Click
@@ -24,6 +31,6 @@
     End Sub
 
     Private Sub PbxHome_Click(sender As Object, e As EventArgs) Handles PbxHome.Click
-        FrmPantallaPrincipal.Show()
+        Me.Close()
     End Sub
 End Class
