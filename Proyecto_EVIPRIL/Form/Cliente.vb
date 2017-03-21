@@ -38,4 +38,8 @@ Public Class FrmCliente
         Me.Close()
         FrmPantallaPrincipal.Show()
     End Sub
+
+    Private Sub FrmCliente_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
