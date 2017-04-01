@@ -2,6 +2,7 @@
 Imports System.Data.SqlClient
 
 Public Class FrmEmpleado
+
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarEstadoCivil()
         CargarProfesion()
@@ -100,4 +101,9 @@ Public Class FrmEmpleado
         FrmPantallaPrincipal.Show()
     End Sub
 
+    Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
+        Conexion.sele = 1
+        Dim f As New FrmReportes
+        f.Show()
+    End Sub
 End Class

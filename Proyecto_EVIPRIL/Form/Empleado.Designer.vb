@@ -22,6 +22,7 @@ Partial Class FrmEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEmpleado))
         Me.cboEstadoCivil = New System.Windows.Forms.ComboBox()
         Me.cboProfesion = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -46,8 +47,10 @@ Partial Class FrmEmpleado
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'cboEstadoCivil
@@ -118,7 +121,7 @@ Partial Class FrmEmpleado
         Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Location = New System.Drawing.Point(412, 7)
+        Me.btnGuardar.Location = New System.Drawing.Point(375, 7)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(58, 58)
         Me.btnGuardar.TabIndex = 19
@@ -130,7 +133,7 @@ Partial Class FrmEmpleado
         Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnInicio.FlatAppearance.BorderSize = 0
         Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInicio.Location = New System.Drawing.Point(192, 2)
+        Me.BtnInicio.Location = New System.Drawing.Point(237, 2)
         Me.BtnInicio.Name = "BtnInicio"
         Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
         Me.BtnInicio.TabIndex = 18
@@ -142,7 +145,7 @@ Partial Class FrmEmpleado
         Me.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSalir.FlatAppearance.BorderSize = 0
         Me.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSalir.Location = New System.Drawing.Point(612, 3)
+        Me.btnSalir.Location = New System.Drawing.Point(639, 3)
         Me.btnSalir.Name = "btnSalir"
         Me.btnSalir.Size = New System.Drawing.Size(60, 69)
         Me.btnSalir.TabIndex = 17
@@ -264,6 +267,7 @@ Partial Class FrmEmpleado
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox13)
         Me.Panel2.Controls.Add(Me.btnSalir)
         Me.Panel2.Controls.Add(Me.btnGuardar)
         Me.Panel2.Controls.Add(Me.BtnInicio)
@@ -271,6 +275,16 @@ Partial Class FrmEmpleado
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(948, 75)
         Me.Panel2.TabIndex = 58
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
+        Me.PictureBox13.Location = New System.Drawing.Point(508, 8)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(58, 58)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 37
+        Me.PictureBox13.TabStop = False
         '
         'FrmEmpleado
         '
@@ -304,6 +318,7 @@ Partial Class FrmEmpleado
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -333,4 +348,5 @@ Partial Class FrmEmpleado
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox13 As PictureBox
 End Class

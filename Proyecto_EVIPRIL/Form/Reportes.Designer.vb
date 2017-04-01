@@ -22,6 +22,7 @@ Partial Class FrmReportes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmReportes))
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
@@ -35,6 +36,7 @@ Partial Class FrmReportes
         Me.DgvReporte = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.LblReporte = New System.Windows.Forms.Label()
+        Me.CsmOpcion = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxAtras, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -159,6 +161,11 @@ Partial Class FrmReportes
         Me.LblReporte.TabIndex = 0
         Me.LblReporte.Text = "Reporte"
         '
+        'CsmOpcion
+        '
+        Me.CsmOpcion.Name = "CsmOpcion"
+        Me.CsmOpcion.Size = New System.Drawing.Size(61, 4)
+        '
         'FrmReportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -200,4 +207,5 @@ Partial Class FrmReportes
     Friend WithEvents DgvReporte As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents LblReporte As Label
+    Friend WithEvents CsmOpcion As ContextMenuStrip
 End Class
