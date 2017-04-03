@@ -22,11 +22,9 @@ Partial Class FrmCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmCliente))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BtnAtras = New System.Windows.Forms.Button()
-        Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.BtnInicio = New System.Windows.Forms.Button()
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.TxtCodigo = New System.Windows.Forms.TextBox()
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
@@ -38,8 +36,15 @@ Partial Class FrmCliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.BtnAtras = New System.Windows.Forms.Button()
+        Me.BtnInicio = New System.Windows.Forms.Button()
+        Me.BtnGuardar = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -60,42 +65,6 @@ Partial Class FrmCliente
         Me.Label6.Size = New System.Drawing.Size(108, 31)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Cliente"
-        '
-        'BtnAtras
-        '
-        Me.BtnAtras.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292297_arrow_back
-        Me.BtnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAtras.FlatAppearance.BorderSize = 0
-        Me.BtnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAtras.Location = New System.Drawing.Point(585, 0)
-        Me.BtnAtras.Name = "BtnAtras"
-        Me.BtnAtras.Size = New System.Drawing.Size(58, 58)
-        Me.BtnAtras.TabIndex = 2
-        Me.BtnAtras.UseVisualStyleBackColor = True
-        '
-        'BtnGuardar
-        '
-        Me.BtnGuardar.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292326_BT_save
-        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnGuardar.FlatAppearance.BorderSize = 0
-        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(415, 3)
-        Me.BtnGuardar.Name = "BtnGuardar"
-        Me.BtnGuardar.Size = New System.Drawing.Size(58, 58)
-        Me.BtnGuardar.TabIndex = 1
-        Me.BtnGuardar.UseVisualStyleBackColor = True
-        '
-        'BtnInicio
-        '
-        Me.BtnInicio.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292273_Streamline_18
-        Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnInicio.FlatAppearance.BorderSize = 0
-        Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInicio.Location = New System.Drawing.Point(219, 3)
-        Me.BtnInicio.Name = "BtnInicio"
-        Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
-        Me.BtnInicio.TabIndex = 0
-        Me.BtnInicio.UseVisualStyleBackColor = True
         '
         'TxtTelefono
         '
@@ -197,13 +166,71 @@ Partial Class FrmCliente
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.BtnAtras)
+        Me.Panel2.Controls.Add(Me.PictureBox13)
         Me.Panel2.Controls.Add(Me.BtnInicio)
         Me.Panel2.Controls.Add(Me.BtnGuardar)
         Me.Panel2.Location = New System.Drawing.Point(1, 406)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(867, 64)
         Me.Panel2.TabIndex = 24
+        '
+        'BtnAtras
+        '
+        Me.BtnAtras.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292297_arrow_back
+        Me.BtnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAtras.FlatAppearance.BorderSize = 0
+        Me.BtnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnAtras.Location = New System.Drawing.Point(662, 3)
+        Me.BtnAtras.Name = "BtnAtras"
+        Me.BtnAtras.Size = New System.Drawing.Size(58, 58)
+        Me.BtnAtras.TabIndex = 2
+        Me.BtnAtras.UseVisualStyleBackColor = True
+        '
+        'BtnInicio
+        '
+        Me.BtnInicio.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292273_Streamline_18
+        Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnInicio.FlatAppearance.BorderSize = 0
+        Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnInicio.Location = New System.Drawing.Point(318, 3)
+        Me.BtnInicio.Name = "BtnInicio"
+        Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
+        Me.BtnInicio.TabIndex = 0
+        Me.BtnInicio.UseVisualStyleBackColor = True
+        '
+        'BtnGuardar
+        '
+        Me.BtnGuardar.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292326_BT_save
+        Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnGuardar.FlatAppearance.BorderSize = 0
+        Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnGuardar.Location = New System.Drawing.Point(431, 3)
+        Me.BtnGuardar.Name = "BtnGuardar"
+        Me.BtnGuardar.Size = New System.Drawing.Size(58, 58)
+        Me.BtnGuardar.TabIndex = 1
+        Me.BtnGuardar.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Proyecto_EVIPRIL.My.Resources.Resources.boton_eliminar
+        Me.PictureBox1.Location = New System.Drawing.Point(200, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(58, 58)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
+        Me.PictureBox13.Location = New System.Drawing.Point(558, 3)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(58, 58)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 39
+        Me.PictureBox13.TabStop = False
         '
         'FrmCliente
         '
@@ -229,6 +256,8 @@ Partial Class FrmCliente
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -250,4 +279,6 @@ Partial Class FrmCliente
     Friend WithEvents Label2 As Label
     Friend WithEvents Label As Label
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox13 As PictureBox
 End Class
