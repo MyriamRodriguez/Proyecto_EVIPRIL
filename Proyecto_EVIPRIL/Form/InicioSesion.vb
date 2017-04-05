@@ -2,7 +2,6 @@
 Imports System.Data.SqlClient
 Public Class FrmInicioSesion
     Private Sub BtnInisioSesion_Click(sender As Object, e As EventArgs) Handles BtnInisioSesion.Click
-        Dim Nombre As String
         Using cnn As New SqlConnection(My.Settings.ConexionEVIPRIL)
 
             Try
@@ -65,5 +64,9 @@ Public Class FrmInicioSesion
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Registrar.Show()
+    End Sub
+
+    Private Sub FrmInicioSesion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

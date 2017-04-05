@@ -2,10 +2,12 @@
 Imports System.Data.SqlClient
 
 Public Class FrmEmpleado
-
+    Implements IForm
     Private Sub FrmEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CargarEstadoCivil()
         CargarProfesion()
+        cboEstadoCivil.Text = ""
+        cboProfesion.Text = ""
     End Sub
 
     Private Sub CargarProfesion()
@@ -103,7 +105,23 @@ Public Class FrmEmpleado
 
     Private Sub PictureBox13_Click(sender As Object, e As EventArgs) Handles PictureBox13.Click
         Conexion.sele = 1
-        Dim f As New FrmReportes
-        f.Show()
+        Dim frm As New FrmReportes()
+        frm.Show(Me)
+        cboEstadoCivil.Text = ""
+        cboProfesion.Text = ""
     End Sub
+
+
+
+    Public Sub ObtenerCuenta(cuenta As String) Implements IForm.ObtenerCuenta
+        txtNumIdentidad.Text = cuenta
+    End Sub
+
+    Private Sub txtNumIdentidad_TextChanged(sender As Object, e As EventArgs) Handles txtNumIdentidad.TextChanged
+        If txtNumIdentidad.Text <> "" Then
+            AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
+        End If
+    End Sub
+
+
 End Class

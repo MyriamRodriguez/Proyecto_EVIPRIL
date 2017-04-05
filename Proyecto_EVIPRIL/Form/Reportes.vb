@@ -174,4 +174,24 @@ Public Class FrmReportes
         da.Fill(dt)
         DgvReporte.DataSource = dt
     End Sub
+
+    Private Sub DgvReporte_DoubleClick(sender As Object, e As EventArgs) Handles DgvReporte.DoubleClick
+        Dim cuenta As String = DgvReporte.CurrentRow.Cells(0).Value
+
+        Dim InstanciaForm As IForm = CType(Me.Owner, IForm)
+
+        If InstanciaForm IsNot Nothing Then
+            InstanciaForm.ObtenerCuenta(cuenta)
+        End If
+        Close()
+    End Sub
+
+    Private Sub TxtBuscar_TextChanged(sender As Object, e As EventArgs) Handles TxtBuscar.TextChanged
+        If sele = 1 Then
+            AccesoDatos.CargarEmpleados(DgvReporte, TxtBuscar.Text)
+        ElseIf sele = 4 Then
+            AccesoDatos.CargarCliente(DgvReporte, TxtBuscar.Text)
+        End If
+    End Sub
+
 End Class

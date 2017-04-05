@@ -60,7 +60,7 @@ Partial Class FrmEmpleado
         Me.cboEstadoCivil.FormattingEnabled = True
         Me.cboEstadoCivil.Location = New System.Drawing.Point(629, 240)
         Me.cboEstadoCivil.Name = "cboEstadoCivil"
-        Me.cboEstadoCivil.Size = New System.Drawing.Size(121, 21)
+        Me.cboEstadoCivil.Size = New System.Drawing.Size(169, 21)
         Me.cboEstadoCivil.TabIndex = 62
         '
         'cboProfesion
@@ -68,7 +68,7 @@ Partial Class FrmEmpleado
         Me.cboProfesion.FormattingEnabled = True
         Me.cboProfesion.Location = New System.Drawing.Point(612, 191)
         Me.cboProfesion.Name = "cboProfesion"
-        Me.cboProfesion.Size = New System.Drawing.Size(121, 21)
+        Me.cboProfesion.Size = New System.Drawing.Size(186, 21)
         Me.cboProfesion.TabIndex = 61
         '
         'Label9
@@ -93,6 +93,7 @@ Partial Class FrmEmpleado
         '
         'dtpFechaNacimiento
         '
+        Me.dtpFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dtpFechaNacimiento.Location = New System.Drawing.Point(715, 114)
         Me.dtpFechaNacimiento.Name = "dtpFechaNacimiento"
         Me.dtpFechaNacimiento.Size = New System.Drawing.Size(200, 20)
@@ -246,7 +247,7 @@ Partial Class FrmEmpleado
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Proyecto_EVIPRIL.My.Resources.Resources.boton_eliminar
-        Me.PictureBox1.Location = New System.Drawing.Point(194, 8)
+        Me.PictureBox1.Location = New System.Drawing.Point(479, 8)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(58, 58)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -256,7 +257,7 @@ Partial Class FrmEmpleado
         'PictureBox13
         '
         Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
-        Me.PictureBox13.Location = New System.Drawing.Point(580, 8)
+        Me.PictureBox13.Location = New System.Drawing.Point(588, 7)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(58, 58)
         Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -281,7 +282,7 @@ Partial Class FrmEmpleado
         Me.btnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGuardar.FlatAppearance.BorderSize = 0
         Me.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnGuardar.Location = New System.Drawing.Point(447, 7)
+        Me.btnGuardar.Location = New System.Drawing.Point(370, 8)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(58, 58)
         Me.btnGuardar.TabIndex = 19
@@ -293,7 +294,7 @@ Partial Class FrmEmpleado
         Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnInicio.FlatAppearance.BorderSize = 0
         Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInicio.Location = New System.Drawing.Point(309, 2)
+        Me.BtnInicio.Location = New System.Drawing.Point(239, 7)
         Me.BtnInicio.Name = "BtnInicio"
         Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
         Me.BtnInicio.TabIndex = 18

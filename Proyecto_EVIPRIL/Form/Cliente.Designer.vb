@@ -28,19 +28,20 @@ Partial Class FrmCliente
         Me.TxtTelefono = New System.Windows.Forms.TextBox()
         Me.TxtCodigo = New System.Windows.Forms.TextBox()
         Me.TxtDireccion = New System.Windows.Forms.TextBox()
-        Me.TxtNombre = New System.Windows.Forms.TextBox()
-        Me.TxtCompañia = New System.Windows.Forms.TextBox()
+        Me.TxtNombreContacto = New System.Windows.Forms.TextBox()
+        Me.TxtNombreCompañia = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BtnAtras = New System.Windows.Forms.Button()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.BtnInicio = New System.Windows.Forms.Button()
         Me.BtnGuardar = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,21 +93,21 @@ Partial Class FrmCliente
         Me.TxtDireccion.Size = New System.Drawing.Size(493, 72)
         Me.TxtDireccion.TabIndex = 19
         '
-        'TxtNombre
+        'TxtNombreContacto
         '
-        Me.TxtNombre.Location = New System.Drawing.Point(201, 211)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtNombre.Name = "TxtNombre"
-        Me.TxtNombre.Size = New System.Drawing.Size(352, 20)
-        Me.TxtNombre.TabIndex = 18
+        Me.TxtNombreContacto.Location = New System.Drawing.Point(201, 211)
+        Me.TxtNombreContacto.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNombreContacto.Name = "TxtNombreContacto"
+        Me.TxtNombreContacto.Size = New System.Drawing.Size(352, 20)
+        Me.TxtNombreContacto.TabIndex = 18
         '
-        'TxtCompañia
+        'TxtNombreCompañia
         '
-        Me.TxtCompañia.Location = New System.Drawing.Point(201, 157)
-        Me.TxtCompañia.Margin = New System.Windows.Forms.Padding(4)
-        Me.TxtCompañia.Name = "TxtCompañia"
-        Me.TxtCompañia.Size = New System.Drawing.Size(352, 20)
-        Me.TxtCompañia.TabIndex = 17
+        Me.TxtNombreCompañia.Location = New System.Drawing.Point(201, 157)
+        Me.TxtNombreCompañia.Margin = New System.Windows.Forms.Padding(4)
+        Me.TxtNombreCompañia.Name = "TxtNombreCompañia"
+        Me.TxtNombreCompañia.Size = New System.Drawing.Size(352, 20)
+        Me.TxtNombreCompañia.TabIndex = 17
         '
         'Label5
         '
@@ -176,17 +177,37 @@ Partial Class FrmCliente
         Me.Panel2.Size = New System.Drawing.Size(867, 64)
         Me.Panel2.TabIndex = 24
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Proyecto_EVIPRIL.My.Resources.Resources.boton_eliminar
+        Me.PictureBox1.Location = New System.Drawing.Point(463, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(58, 58)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 40
+        Me.PictureBox1.TabStop = False
+        '
         'BtnAtras
         '
         Me.BtnAtras.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources._1489292297_arrow_back
         Me.BtnAtras.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAtras.FlatAppearance.BorderSize = 0
         Me.BtnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnAtras.Location = New System.Drawing.Point(662, 3)
+        Me.BtnAtras.Location = New System.Drawing.Point(666, 3)
         Me.BtnAtras.Name = "BtnAtras"
         Me.BtnAtras.Size = New System.Drawing.Size(58, 58)
         Me.BtnAtras.TabIndex = 2
         Me.BtnAtras.UseVisualStyleBackColor = True
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
+        Me.PictureBox13.Location = New System.Drawing.Point(572, 3)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(58, 58)
+        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox13.TabIndex = 39
+        Me.PictureBox13.TabStop = False
         '
         'BtnInicio
         '
@@ -194,7 +215,7 @@ Partial Class FrmCliente
         Me.BtnInicio.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnInicio.FlatAppearance.BorderSize = 0
         Me.BtnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnInicio.Location = New System.Drawing.Point(318, 3)
+        Me.BtnInicio.Location = New System.Drawing.Point(233, 3)
         Me.BtnInicio.Name = "BtnInicio"
         Me.BtnInicio.Size = New System.Drawing.Size(58, 58)
         Me.BtnInicio.TabIndex = 0
@@ -206,45 +227,35 @@ Partial Class FrmCliente
         Me.BtnGuardar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnGuardar.FlatAppearance.BorderSize = 0
         Me.BtnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnGuardar.Location = New System.Drawing.Point(431, 3)
+        Me.BtnGuardar.Location = New System.Drawing.Point(353, 6)
         Me.BtnGuardar.Name = "BtnGuardar"
         Me.BtnGuardar.Size = New System.Drawing.Size(58, 58)
         Me.BtnGuardar.TabIndex = 1
         Me.BtnGuardar.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'BtnModificar
         '
-        Me.PictureBox1.Image = Global.Proyecto_EVIPRIL.My.Resources.Resources.boton_eliminar
-        Me.PictureBox1.Location = New System.Drawing.Point(200, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(58, 58)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 40
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Image = CType(resources.GetObject("PictureBox13.Image"), System.Drawing.Image)
-        Me.PictureBox13.Location = New System.Drawing.Point(558, 3)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(58, 58)
-        Me.PictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox13.TabIndex = 39
-        Me.PictureBox13.TabStop = False
+        Me.BtnModificar.Location = New System.Drawing.Point(201, 361)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(75, 23)
+        Me.BtnModificar.TabIndex = 25
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.UseVisualStyleBackColor = True
         '
         'FrmCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(866, 465)
+        Me.ClientSize = New System.Drawing.Size(866, 470)
+        Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TxtTelefono)
         Me.Controls.Add(Me.TxtCodigo)
         Me.Controls.Add(Me.TxtDireccion)
-        Me.Controls.Add(Me.TxtNombre)
-        Me.Controls.Add(Me.TxtCompañia)
+        Me.Controls.Add(Me.TxtNombreContacto)
+        Me.Controls.Add(Me.TxtNombreCompañia)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
@@ -271,8 +282,8 @@ Partial Class FrmCliente
     Friend WithEvents TxtTelefono As TextBox
     Friend WithEvents TxtCodigo As TextBox
     Friend WithEvents TxtDireccion As TextBox
-    Friend WithEvents TxtNombre As TextBox
-    Friend WithEvents TxtCompañia As TextBox
+    Friend WithEvents TxtNombreContacto As TextBox
+    Friend WithEvents TxtNombreCompañia As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
@@ -281,4 +292,5 @@ Partial Class FrmCliente
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox13 As PictureBox
+    Friend WithEvents BtnModificar As Button
 End Class

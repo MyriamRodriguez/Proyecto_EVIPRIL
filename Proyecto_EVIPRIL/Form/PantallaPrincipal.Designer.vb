@@ -43,6 +43,7 @@ Partial Class FrmPantallaPrincipal
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.LblCerrar = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -251,12 +252,22 @@ Partial Class FrmPantallaPrincipal
         Me.PictureBox3.TabIndex = 50
         Me.PictureBox3.TabStop = False
         '
+        'LblCerrar
+        '
+        Me.LblCerrar.AutoSize = True
+        Me.LblCerrar.Location = New System.Drawing.Point(90, 363)
+        Me.LblCerrar.Name = "LblCerrar"
+        Me.LblCerrar.Size = New System.Drawing.Size(71, 13)
+        Me.LblCerrar.TabIndex = 65
+        Me.LblCerrar.Text = "Cerrar Secion"
+        '
         'FrmPantallaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 478)
+        Me.Controls.Add(Me.LblCerrar)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label8)
@@ -312,4 +323,5 @@ Partial Class FrmPantallaPrincipal
     Friend WithEvents LblBienvenido As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LblNombre As Label
+    Friend WithEvents LblCerrar As Label
 End Class

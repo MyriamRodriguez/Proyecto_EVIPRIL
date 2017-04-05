@@ -5,7 +5,9 @@
 
     Private Sub PantallaPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LblNombre.Text = Identificador.Nombre
+
     End Sub
+
 
 
     Private Sub PictureBox5_Click(sender As Object, e As EventArgs) Handles PictureBox5.Click
@@ -33,5 +35,14 @@
 
     Private Sub PictureBox7_Click(sender As Object, e As EventArgs) Handles PictureBox7.Click
         FrmInventario.Show()
+    End Sub
+
+    Private Sub LblCerrar_Click(sender As Object, e As EventArgs) Handles LblCerrar.Click
+        Me.Close()
+        FrmInicioSesion.Show()
+    End Sub
+
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        FrmPrestaciones.Show()
     End Sub
 End Class
