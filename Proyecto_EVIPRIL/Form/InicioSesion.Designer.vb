@@ -31,7 +31,6 @@ Partial Class FrmInicioSesion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.BtnInisioSesion = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -45,6 +44,7 @@ Partial Class FrmInicioSesion
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.PictureBox3.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources.Evipril
         Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
         Me.PictureBox3.Location = New System.Drawing.Point(1, 231)
         Me.PictureBox3.Name = "PictureBox3"
@@ -56,6 +56,8 @@ Partial Class FrmInicioSesion
         'PictureBox2
         '
         Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.PictureBox2.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources.Evipril
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
         Me.PictureBox2.Location = New System.Drawing.Point(1, 194)
         Me.PictureBox2.Name = "PictureBox2"
@@ -82,6 +84,7 @@ Partial Class FrmInicioSesion
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(66, 240)
         Me.Label3.Name = "Label3"
@@ -92,6 +95,7 @@ Partial Class FrmInicioSesion
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(35, 206)
         Me.Label2.Name = "Label2"
@@ -112,28 +116,17 @@ Partial Class FrmInicioSesion
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.LinkLabel1)
         Me.Panel2.Controls.Add(Me.BtnInisioSesion)
         Me.Panel2.Location = New System.Drawing.Point(0, 302)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(388, 58)
         Me.Panel2.TabIndex = 28
         '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(132, 36)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(114, 13)
-        Me.LinkLabel1.TabIndex = 1
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Registrate en EVIPRIL"
-        '
         'BtnInisioSesion
         '
         Me.BtnInisioSesion.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.BtnInisioSesion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnInisioSesion.Location = New System.Drawing.Point(118, 0)
+        Me.BtnInisioSesion.Location = New System.Drawing.Point(123, 11)
         Me.BtnInisioSesion.Name = "BtnInisioSesion"
         Me.BtnInisioSesion.Size = New System.Drawing.Size(147, 33)
         Me.BtnInisioSesion.TabIndex = 0
@@ -164,6 +157,7 @@ Partial Class FrmInicioSesion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
+        Me.BackgroundImage = Global.Proyecto_EVIPRIL.My.Resources.Resources.Evipril
         Me.ClientSize = New System.Drawing.Size(387, 358)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
@@ -177,12 +171,10 @@ Partial Class FrmInicioSesion
         Me.MaximizeBox = False
         Me.Name = "FrmInicioSesion"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Inicio Sesión"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -198,7 +190,6 @@ Partial Class FrmInicioSesion
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents BtnInisioSesion As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label

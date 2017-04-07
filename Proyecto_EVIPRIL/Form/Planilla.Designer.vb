@@ -422,7 +422,6 @@ Partial Class FrmPlanilla
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmPlanilla"
-        Me.Text = "Planilla"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

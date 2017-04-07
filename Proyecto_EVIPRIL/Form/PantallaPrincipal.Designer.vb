@@ -287,7 +287,6 @@ Partial Class FrmPantallaPrincipal
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmPantallaPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "PantallaPrincipal"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()

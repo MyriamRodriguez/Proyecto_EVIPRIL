@@ -263,7 +263,6 @@ Partial Class FrmCliente
         Me.Controls.Add(Me.Label)
         Me.Name = "FrmCliente"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Cliente"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

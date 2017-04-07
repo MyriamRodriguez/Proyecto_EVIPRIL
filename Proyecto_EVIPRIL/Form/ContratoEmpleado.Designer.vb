@@ -258,7 +258,6 @@ Partial Class FrmContratoEmpleado
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmContratoEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "ContratoEmpleado"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)

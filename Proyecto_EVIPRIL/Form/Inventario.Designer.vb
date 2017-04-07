@@ -238,7 +238,6 @@ Partial Class FrmInventario
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.Name = "FrmInventario"
-        Me.Text = "Inventario"
         Me.Panel2.ResumeLayout(False)
         CType(Me.tBtninicio, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Btnguardar, System.ComponentModel.ISupportInitialize).EndInit()

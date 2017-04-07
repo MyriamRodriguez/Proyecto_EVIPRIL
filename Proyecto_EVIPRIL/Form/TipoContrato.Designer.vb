@@ -126,7 +126,6 @@ Partial Class FrmTipoContrato
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmTipoContrato"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "TipoContrato"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
