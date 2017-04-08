@@ -15,7 +15,8 @@ Public Class FrmInventario
     End Sub
 
     Private Sub Btnatras_Click(sender As Object, e As EventArgs) Handles Btnatras.Click
-        Close()
+        Me.Close()
+        FrmPantallaPrincipal.Show()
     End Sub
 
     Private Sub tBtninicio_Click(sender As Object, e As EventArgs) Handles tBtninicio.Click

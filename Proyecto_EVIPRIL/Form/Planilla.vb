@@ -32,5 +32,10 @@
 
     Private Sub PbxHome_Click(sender As Object, e As EventArgs) Handles PbxHome.Click
         Me.Close()
+        FrmPantallaPrincipal.Show()
+    End Sub
+
+    Private Sub FrmPlanilla_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

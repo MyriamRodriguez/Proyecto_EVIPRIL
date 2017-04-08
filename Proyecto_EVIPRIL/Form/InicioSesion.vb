@@ -21,6 +21,7 @@ Public Class FrmInicioSesion
                         Identificador.Nombre = TxtUsuario.Text
                         Dim f As New FrmPantallaPrincipal
                         f.Show()
+                        Me.Hide()
                     Else
                         MsgBox("Usuario y contraseña invalido")
                     End If

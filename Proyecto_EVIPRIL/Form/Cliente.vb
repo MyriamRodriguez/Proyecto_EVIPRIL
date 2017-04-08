@@ -32,6 +32,7 @@ Public Class FrmCliente
 
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click
         Me.Close()
+        FrmPantallaPrincipal.Show()
 
     End Sub
 

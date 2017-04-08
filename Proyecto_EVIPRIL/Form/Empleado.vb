@@ -95,7 +95,8 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
-        Close()
+        Me.Close()
+        FrmPantallaPrincipal.Show()
     End Sub
 
     Private Sub BtnInicio_Click(sender As Object, e As EventArgs) Handles BtnInicio.Click

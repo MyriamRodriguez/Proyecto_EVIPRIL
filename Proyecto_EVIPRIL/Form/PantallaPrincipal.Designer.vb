@@ -44,6 +44,7 @@ Partial Class FrmPantallaPrincipal
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.LblCerrar = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -53,6 +54,7 @@ Partial Class FrmPantallaPrincipal
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label9
@@ -145,6 +147,8 @@ Partial Class FrmPantallaPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LblCerrar)
+        Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.LblNombre)
         Me.Panel1.Controls.Add(Me.LblBienvenido)
         Me.Panel1.Controls.Add(Me.PictureBox2)
@@ -255,11 +259,23 @@ Partial Class FrmPantallaPrincipal
         'LblCerrar
         '
         Me.LblCerrar.AutoSize = True
-        Me.LblCerrar.Location = New System.Drawing.Point(90, 363)
+        Me.LblCerrar.BackColor = System.Drawing.Color.Transparent
+        Me.LblCerrar.Location = New System.Drawing.Point(696, 44)
         Me.LblCerrar.Name = "LblCerrar"
         Me.LblCerrar.Size = New System.Drawing.Size(71, 13)
         Me.LblCerrar.TabIndex = 65
         Me.LblCerrar.Text = "Cerrar Secion"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(690, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(88, 44)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 66
+        Me.PictureBox1.TabStop = False
         '
         'FrmPantallaPrincipal
         '
@@ -267,7 +283,6 @@ Partial Class FrmPantallaPrincipal
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(778, 478)
-        Me.Controls.Add(Me.LblCerrar)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label8)
@@ -285,6 +300,7 @@ Partial Class FrmPantallaPrincipal
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
+        Me.MaximizeBox = False
         Me.Name = "FrmPantallaPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Panel1.ResumeLayout(False)
@@ -297,6 +313,7 @@ Partial Class FrmPantallaPrincipal
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -323,4 +340,5 @@ Partial Class FrmPantallaPrincipal
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents LblNombre As Label
     Friend WithEvents LblCerrar As Label
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

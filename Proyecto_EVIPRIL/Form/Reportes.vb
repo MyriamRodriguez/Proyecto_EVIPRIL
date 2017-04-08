@@ -48,7 +48,8 @@ Public Class FrmReportes
 
     End Sub
     Private Sub PbxAtras_Click(sender As Object, e As EventArgs) Handles PbxAtras.Click
-        Dispose()
+        Me.Close()
+        FrmReporte.Show()
     End Sub
 
     Private Sub Reportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -193,6 +194,4 @@ Public Class FrmReportes
             AccesoDatos.CargarCliente(DgvReporte, TxtBuscar.Text)
         End If
     End Sub
-
-   b
 End Class

@@ -8,11 +8,12 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-        Close()
+        Me.Close()
         FrmPantallaPrincipal.Show()
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+        Me.Hide()
         If CboTipoContrato.Text = "Cliente" Then
             Close()
             FrmContratoCliente.Show()
