@@ -10,5 +10,6 @@
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         Me.Close()
+        FrmPantallaPrincipal.Show()
     End Sub
 End Class

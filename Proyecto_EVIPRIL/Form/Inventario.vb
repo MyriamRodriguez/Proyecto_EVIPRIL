@@ -1,8 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class FrmInventario
     Private Sub btnguardar_Click(sender As Object, e As EventArgs) Handles Btnguardar.Click
-        If Txtserie.Text = "" Or Txtcalibre.Text = "" Or Txtfabricacion.Text = "" Or CboTipoArma.Text = "" Or Cbomodelo.Text = "" Or Cbomarca.Text = "" Then
-            MsgBox("No puede dejar campos vacios.")
+        If Validar() = False Then
         Else
             AgregarArma()
             Txtcalibre.Text = ""
@@ -125,4 +124,45 @@ Public Class FrmInventario
             cnn.Close()
         End Try
     End Sub
+    Private Function Validar() As Boolean
+        Dim estado As Boolean
+        If Txtserie.Text = "" And Txtcalibre.Text = "" And Txtfabricacion.Text = "" And Cbomarca.Text = "" And Cbomodelo.Text = "" And CboTipoArma.Text = "" Then
+            EpError.SetError(Txtserie, "Campo obligatorio")
+            EpError.SetError(Txtcalibre, "Campo obligatorio")
+            EpError.SetError(Txtfabricacion, "Campo obligatorio")
+            EpError.SetError(Cbomarca, "Campo obligatorio")
+            EpError.SetError(Cbomodelo, "Campo obligatorio")
+            EpError.SetError(CboTipoArma, "Campo obligatorio")
+            estado = False
+        ElseIf Txtcalibre.Text = "" And Txtfabricacion.Text = "" And Cbomarca.Text = "" And Cbomodelo.Text = "" And CboTipoArma.Text = "" Then
+            EpError.SetError(Txtcalibre, "Campo obligatorio")
+            EpError.SetError(Txtfabricacion, "Campo obligatorio")
+            EpError.SetError(Cbomarca, "Campo obligatorio")
+            EpError.SetError(Cbomodelo, "Campo obligatorio")
+            EpError.SetError(CboTipoArma, "Campo obligatorio")
+            estado = False
+        ElseIf Txtfabricacion.Text = "" And Cbomarca.Text = "" And Cbomodelo.Text = "" And CboTipoArma.Text = "" Then
+            EpError.SetError(Txtfabricacion, "Campo obligatorio")
+            EpError.SetError(Cbomarca, "Campo obligatorio")
+            EpError.SetError(Cbomodelo, "Campo obligatorio")
+            EpError.SetError(CboTipoArma, "Campo obligatorio")
+            estado = False
+        ElseIf Cbomarca.Text = "" And Cbomodelo.Text = "" And CboTipoArma.Text = "" Then
+            EpError.SetError(Cbomarca, "Campo obligatorio")
+            EpError.SetError(Cbomodelo, "Campo obligatorio")
+            EpError.SetError(CboTipoArma, "Campo obligatorio")
+            estado = False
+        ElseIf Cbomodelo.Text = "" And CboTipoArma.Text = "" Then
+            EpError.SetError(Cbomodelo, "Campo obligatorio")
+            EpError.SetError(CboTipoArma, "Campo obligatorio")
+            estado = False
+        ElseIf CboTipoArma.Text = "" Then
+            EpError.SetError(CboTipoArma, "Campo obligatorio")
+            estado = False
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
+
 End Class

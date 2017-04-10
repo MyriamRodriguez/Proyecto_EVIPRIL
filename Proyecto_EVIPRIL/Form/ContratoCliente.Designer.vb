@@ -22,6 +22,7 @@ Partial Class FrmContratoCliente
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContratoCliente))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -39,11 +40,13 @@ Partial Class FrmContratoCliente
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CboNombreCliente = New System.Windows.Forms.ComboBox()
+        Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -193,6 +196,11 @@ Partial Class FrmContratoCliente
         Me.CboNombreCliente.Size = New System.Drawing.Size(191, 21)
         Me.CboNombreCliente.TabIndex = 67
         '
+        'EpError
+        '
+        Me.EpError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.EpError.ContainerControl = Me
+        '
         'FrmContratoCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -219,6 +227,7 @@ Partial Class FrmContratoCliente
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -240,4 +249,5 @@ Partial Class FrmContratoCliente
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents CboNombreCliente As ComboBox
+    Friend WithEvents EpError As ErrorProvider
 End Class

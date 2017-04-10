@@ -22,6 +22,7 @@ Partial Class FrmInventario
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmInventario))
         Me.Cbomarca = New System.Windows.Forms.ComboBox()
         Me.Cbomodelo = New System.Windows.Forms.ComboBox()
@@ -41,11 +42,13 @@ Partial Class FrmInventario
         Me.Txtcalibre = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.CboTipoArma = New System.Windows.Forms.ComboBox()
+        Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel2.SuspendLayout()
         CType(Me.tBtninicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btnguardar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Btnatras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Cbomarca
@@ -217,6 +220,10 @@ Partial Class FrmInventario
         Me.CboTipoArma.Size = New System.Drawing.Size(121, 21)
         Me.CboTipoArma.TabIndex = 45
         '
+        'EpError
+        '
+        Me.EpError.ContainerControl = Me
+        '
         'FrmInventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -244,6 +251,7 @@ Partial Class FrmInventario
         CType(Me.Btnatras, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -267,4 +275,5 @@ Partial Class FrmInventario
     Friend WithEvents Txtcalibre As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents CboTipoArma As ComboBox
+    Friend WithEvents EpError As ErrorProvider
 End Class

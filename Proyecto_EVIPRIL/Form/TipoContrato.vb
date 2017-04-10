@@ -13,15 +13,22 @@
     End Sub
 
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
-        Me.Hide()
         If CboTipoContrato.Text = "Cliente" Then
-            Close()
             FrmContratoCliente.Show()
-        Else
-            CboTipoContrato.Text = "Emleado"
-            Close()
+            Me.Hide()
+        ElseIf CboTipoContrato.Text = "Emleado" Then
             FrmContratoEmpleado.Show()
-
+            Me.Hide()
         End If
     End Sub
+    Private Function Validar() As Boolean
+        Dim estado As Boolean
+        If CboTipoContrato.Text = "" Then
+            EpError.SetError(CboTipoContrato, "Campo Obligatorio")
+            estado = False
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
 End Class

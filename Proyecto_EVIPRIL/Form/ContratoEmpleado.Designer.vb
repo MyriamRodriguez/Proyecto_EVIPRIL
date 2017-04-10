@@ -22,6 +22,7 @@ Partial Class FrmContratoEmpleado
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmContratoEmpleado))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
@@ -42,11 +43,13 @@ Partial Class FrmContratoEmpleado
         Me.CboTipoContrato = New System.Windows.Forms.ComboBox()
         Me.CboBeneficiario = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -235,6 +238,11 @@ Partial Class FrmContratoEmpleado
         Me.Label1.TabIndex = 71
         Me.Label1.Text = "Reguistrar Nuevo Beneficiario"
         '
+        'EpError
+        '
+        Me.EpError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.EpError.ContainerControl = Me
+        '
         'FrmContratoEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -264,6 +272,7 @@ Partial Class FrmContratoEmpleado
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -288,4 +297,5 @@ Partial Class FrmContratoEmpleado
     Friend WithEvents CboTipoContrato As ComboBox
     Friend WithEvents CboBeneficiario As ComboBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents EpError As ErrorProvider
 End Class

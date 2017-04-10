@@ -22,6 +22,7 @@ Partial Class FrmPlanilla
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPlanilla))
         Me.TxtTotalPagar = New System.Windows.Forms.TextBox()
         Me.TxtTotalDeduc = New System.Windows.Forms.TextBox()
@@ -56,12 +57,14 @@ Partial Class FrmPlanilla
         Me.TxtNumIdentidad = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PbxCalcular, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxHome, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TxtTotalPagar
@@ -212,7 +215,7 @@ Partial Class FrmPlanilla
         'PbxCalcular
         '
         Me.PbxCalcular.Image = CType(resources.GetObject("PbxCalcular.Image"), System.Drawing.Image)
-        Me.PbxCalcular.Location = New System.Drawing.Point(518, 12)
+        Me.PbxCalcular.Location = New System.Drawing.Point(518, 7)
         Me.PbxCalcular.Name = "PbxCalcular"
         Me.PbxCalcular.Size = New System.Drawing.Size(58, 58)
         Me.PbxCalcular.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -222,7 +225,7 @@ Partial Class FrmPlanilla
         'PbxImprimir
         '
         Me.PbxImprimir.Image = CType(resources.GetObject("PbxImprimir.Image"), System.Drawing.Image)
-        Me.PbxImprimir.Location = New System.Drawing.Point(680, 12)
+        Me.PbxImprimir.Location = New System.Drawing.Point(680, 10)
         Me.PbxImprimir.Name = "PbxImprimir"
         Me.PbxImprimir.Size = New System.Drawing.Size(58, 58)
         Me.PbxImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -242,7 +245,7 @@ Partial Class FrmPlanilla
         'PbxGuardar
         '
         Me.PbxGuardar.Image = CType(resources.GetObject("PbxGuardar.Image"), System.Drawing.Image)
-        Me.PbxGuardar.Location = New System.Drawing.Point(370, 14)
+        Me.PbxGuardar.Location = New System.Drawing.Point(370, 11)
         Me.PbxGuardar.Name = "PbxGuardar"
         Me.PbxGuardar.Size = New System.Drawing.Size(53, 53)
         Me.PbxGuardar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -387,6 +390,11 @@ Partial Class FrmPlanilla
         Me.Label1.TabIndex = 44
         Me.Label1.Text = "Número de Identidad"
         '
+        'EpError
+        '
+        Me.EpError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
+        Me.EpError.ContainerControl = Me
+        '
         'FrmPlanilla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -429,6 +437,7 @@ Partial Class FrmPlanilla
         CType(Me.PbxImprimir, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxHome, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PbxGuardar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -466,4 +475,5 @@ Partial Class FrmPlanilla
     Friend WithEvents PbxImprimir As PictureBox
     Friend WithEvents PbxHome As PictureBox
     Friend WithEvents PbxGuardar As PictureBox
+    Friend WithEvents EpError As ErrorProvider
 End Class

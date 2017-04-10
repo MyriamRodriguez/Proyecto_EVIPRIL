@@ -22,6 +22,7 @@ Partial Class FrmTipoContrato
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmTipoContrato))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -31,10 +32,12 @@ Partial Class FrmTipoContrato
         Me.CboTipoContrato = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -113,6 +116,10 @@ Partial Class FrmTipoContrato
         Me.Label4.Size = New System.Drawing.Size(0, 13)
         Me.Label4.TabIndex = 42
         '
+        'EpError
+        '
+        Me.EpError.ContainerControl = Me
+        '
         'FrmTipoContrato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -131,6 +138,7 @@ Partial Class FrmTipoContrato
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EpError, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -144,4 +152,5 @@ Partial Class FrmTipoContrato
     Friend WithEvents CboTipoContrato As ComboBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents EpError As ErrorProvider
 End Class

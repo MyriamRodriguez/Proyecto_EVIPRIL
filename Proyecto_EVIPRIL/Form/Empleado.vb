@@ -85,11 +85,18 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If txtNombre.Text = "" Or txtApellido.Text = "" Or txtDireccion.Text = "" Or txtNumCuenta.Text = "" Or txtNumIdentidad.Text = "" Or txtTelefono.Text = "" Then
-            MsgBox("No puede dejar campos vacios.")
+        If Validar() = True Then
+            Validar()
         Else
-
             AgregarEmpleado()
+            txtNumIdentidad.Clear()
+            txtNombre.Text = ""
+            txtApellido.Text = ""
+            txtTelefono.Text = ""
+            txtDireccion.Text = ""
+            txtNumCuenta.Text = ""
+            cboProfesion.Text = ""
+            cboEstadoCivil.Text = ""
         End If
 
     End Sub
@@ -124,5 +131,106 @@ Public Class FrmEmpleado
         End If
     End Sub
 
+    Private Function Validar() As Boolean
+        Dim Estado As Boolean
+        If txtNumIdentidad.Text = Nothing And txtNombre.Text = Nothing And txtApellido.Text = Nothing And txtTelefono.Text = Nothing And txtDireccion.Text = Nothing And txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtNumIdentidad, "Campo Obligatorio")
+            EpError.SetError(txtNombre, "Campo Obligatorio")
+            EpError.SetError(txtApellido, "Campo Obligatorio")
+            EpError.SetError(txtTelefono, "Campo Obligatorio")
+            EpError.SetError(txtDireccion, "Campo Obligatorio")
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf txtNombre.Text = Nothing And txtApellido.Text = Nothing And txtTelefono.Text = Nothing And txtDireccion.Text = Nothing And txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtNombre, "Campo Obligatorio")
+            EpError.SetError(txtApellido, "Campo Obligatorio")
+            EpError.SetError(txtTelefono, "Campo Obligatorio")
+            EpError.SetError(txtDireccion, "Campo Obligatorio")
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf txtApellido.Text = Nothing And txtTelefono.Text = Nothing And txtDireccion.Text = Nothing And txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtApellido, "Campo Obligatorio")
+            EpError.SetError(txtTelefono, "Campo Obligatorio")
+            EpError.SetError(txtDireccion, "Campo Obligatorio")
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf txtTelefono.Text = Nothing And txtDireccion.Text = Nothing And txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtTelefono, "Campo Obligatorio")
+            EpError.SetError(txtDireccion, "Campo Obligatorio")
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf txtDireccion.Text = Nothing And txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtDireccion, "Campo Obligatorio")
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf txtNumCuenta.Text = Nothing And cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(txtNumCuenta, "Campo Obligatorio")
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf cboProfesion.Text = "" And cboEstadoCivil.Text = "" Then
+            EpError.SetError(cboProfesion, "Campo Obligatorio")
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        ElseIf cboEstadoCivil.Text = "" Then
+            EpError.SetError(cboEstadoCivil, "Campo Obligatorio")
+            Estado = True
+        Else
+            Estado = True
+        End If
+        Return Estado
+    End Function
 
+    Private Sub Editar()
+        If cnn.State = ConnectionState.Open Then
+            cnn.Close()
+        End If
+
+        Try
+            cnn.Open()
+            Using cmd As New SqlCommand
+                With cmd
+                    .CommandText = "Sp_ActualizarEmpleado"
+                    .CommandType = CommandType.StoredProcedure
+                    .Connection = cnn
+
+                    'establecer los parametros que espera el procedimiento almacenado
+                    .Parameters.Add("@NumIdentidad", SqlDbType.Char, 13).Value = Trim(txtNumIdentidad.Text)
+                    .Parameters.Add("@Nombres", SqlDbType.NVarChar, 50).Value = Trim(txtNombre.Text)
+                    .Parameters.Add("@Apellidos", SqlDbType.NVarChar, 50).Value = Trim(txtApellido.Text)
+                    .Parameters.Add("@Direccion", SqlDbType.NVarChar, 300).Value = Trim(txtDireccion.Text)
+                    .Parameters.Add("@Telefono", SqlDbType.Char, 9).Value = Trim(txtTelefono.Text)
+                    .Parameters.Add("@FechaNac", SqlDbType.Date).Value = Trim(dtpFechaNacimiento.Text)
+                    .Parameters.Add("@NumCuenta", SqlDbType.Int).Value = Trim(txtNumCuenta.Text)
+                    .Parameters.Add("@IdProfecion", SqlDbType.Int).Value = Trim(cboProfesion.SelectedValue)
+                    .Parameters.Add("@IdEstaCivil", SqlDbType.Int).Value = Trim(cboEstadoCivil.SelectedValue)
+                    .ExecuteNonQuery()
+                    MessageBox.Show("Registro Modificado satisfactoriamente", "SeguridadLeon")
+                End With
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error al  Modificar el empleado" + ex.Message)
+        Finally
+            cnn.Close()
+        End Try
+    End Sub
+
+    Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
+        Call Editar()
+    End Sub
 End Class

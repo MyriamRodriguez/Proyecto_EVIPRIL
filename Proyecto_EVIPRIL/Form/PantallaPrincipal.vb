@@ -46,7 +46,14 @@
     End Sub
 
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        FrmInicioSesion.TxtContraseña.Text = ""
+        FrmInicioSesion.TxtContraseña.Focus()
         Me.Hide()
         FrmInicioSesion.Show()
+    End Sub
+
+    Private Sub LbRegistrar_Click(sender As Object, e As EventArgs) Handles LbRegistrar.Click
+        Me.Hide()
+        Registrar.Show()
     End Sub
 End Class

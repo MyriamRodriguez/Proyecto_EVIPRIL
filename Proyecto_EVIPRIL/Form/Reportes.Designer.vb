@@ -115,9 +115,12 @@ Partial Class FrmReportes
         '
         'DgvReporte
         '
+        Me.DgvReporte.AllowUserToAddRows = False
+        Me.DgvReporte.AllowUserToDeleteRows = False
         Me.DgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvReporte.Location = New System.Drawing.Point(76, 174)
         Me.DgvReporte.Name = "DgvReporte"
+        Me.DgvReporte.ReadOnly = True
         Me.DgvReporte.Size = New System.Drawing.Size(827, 294)
         Me.DgvReporte.TabIndex = 9
         '

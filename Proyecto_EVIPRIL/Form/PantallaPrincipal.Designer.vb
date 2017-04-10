@@ -45,6 +45,7 @@ Partial Class FrmPantallaPrincipal
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.LblCerrar = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.LbRegistrar = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -147,6 +148,7 @@ Partial Class FrmPantallaPrincipal
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(115, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.LbRegistrar)
         Me.Panel1.Controls.Add(Me.LblCerrar)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Controls.Add(Me.LblNombre)
@@ -161,7 +163,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.LblNombre.AutoSize = True
         Me.LblNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblNombre.Location = New System.Drawing.Point(140, 30)
+        Me.LblNombre.Location = New System.Drawing.Point(125, 10)
         Me.LblNombre.Name = "LblNombre"
         Me.LblNombre.Size = New System.Drawing.Size(0, 24)
         Me.LblNombre.TabIndex = 65
@@ -170,7 +172,7 @@ Partial Class FrmPantallaPrincipal
         '
         Me.LblBienvenido.AutoSize = True
         Me.LblBienvenido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblBienvenido.Location = New System.Drawing.Point(27, 30)
+        Me.LblBienvenido.Location = New System.Drawing.Point(12, 10)
         Me.LblBienvenido.Name = "LblBienvenido"
         Me.LblBienvenido.Size = New System.Drawing.Size(121, 24)
         Me.LblBienvenido.TabIndex = 14
@@ -179,7 +181,7 @@ Partial Class FrmPantallaPrincipal
         'PictureBox2
         '
         Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(338, 11)
+        Me.PictureBox2.Location = New System.Drawing.Point(325, 2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(46, 44)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -277,6 +279,19 @@ Partial Class FrmPantallaPrincipal
         Me.PictureBox1.TabIndex = 66
         Me.PictureBox1.TabStop = False
         '
+        'LbRegistrar
+        '
+        Me.LbRegistrar.AutoSize = True
+        Me.LbRegistrar.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LbRegistrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType(((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic) _
+                Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LbRegistrar.ForeColor = System.Drawing.Color.Red
+        Me.LbRegistrar.Location = New System.Drawing.Point(12, 39)
+        Me.LbRegistrar.Name = "LbRegistrar"
+        Me.LbRegistrar.Size = New System.Drawing.Size(130, 16)
+        Me.LbRegistrar.TabIndex = 67
+        Me.LbRegistrar.Text = "Registrar Usuario"
+        '
         'FrmPantallaPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -341,4 +356,5 @@ Partial Class FrmPantallaPrincipal
     Friend WithEvents LblNombre As Label
     Friend WithEvents LblCerrar As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents LbRegistrar As Label
 End Class

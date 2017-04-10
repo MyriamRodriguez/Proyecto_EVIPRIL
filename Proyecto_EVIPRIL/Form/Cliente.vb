@@ -3,7 +3,13 @@
 Public Class FrmCliente
     Implements IForm
     Private Sub BtnGuardar_Click(sender As Object, e As EventArgs) Handles BtnGuardar.Click
-        Call AgregarCliente()
+        If Validar() = True Then
+
+
+        Else
+            Call AgregarCliente()
+        End If
+
     End Sub
 
     Private Sub AgregarCliente()
@@ -101,9 +107,28 @@ Public Class FrmCliente
         End Try
     End Sub
 
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
-
-    End Sub
-
+    Private Function Validar() As Boolean
+        Dim Estado As Boolean
+        If TxtNombreCompañia.Text = Nothing And TxtNombreContacto.Text = Nothing And TxtTelefono.Text = Nothing And TxtDireccion.Text = Nothing Then
+            EpError.SetError(TxtNombreCompañia, "Campo Obligatorio")
+            EpError.SetError(TxtNombreContacto, "Campo Obligatorio")
+            EpError.SetError(TxtTelefono, "Campo Obligatorio")
+            EpError.SetError(TxtDireccion, "Campo Obligatorio")
+            Estado = True
+        ElseIf TxtNombreContacto.Text = Nothing And TxtTelefono.Text = Nothing And TxtDireccion.Text = Nothing Then
+            EpError.SetError(TxtNombreContacto, "Campo Obligatorio")
+            EpError.SetError(TxtTelefono, "Campo Obligatorio")
+            EpError.SetError(TxtDireccion, "Campo Obligatorio")
+            Estado = True
+        ElseIf TxtTelefono.Text = Nothing And TxtDireccion.Text = Nothing Then
+            EpError.SetError(TxtTelefono, "Campo Obligatorio")
+            EpError.SetError(TxtDireccion, "Campo Obligatorio")
+            Estado = True
+        ElseIf TxtDireccion.Text = Nothing Then
+            EpError.SetError(TxtDireccion, "Campo Obligatorio")
+            Estado = True
+        End If
+        Return Estado
+    End Function
 
 End Class

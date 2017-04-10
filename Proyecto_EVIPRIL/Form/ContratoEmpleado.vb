@@ -110,8 +110,7 @@ Public Class FrmContratoEmpleado
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-        If TxtFechaFinal.Text = "" Or TxtFechaInicio.Text = "" Or CboTipoContrato.Text = "" Or TxtNumIdentidad.Text = "" Or CboBeneficiario.Text = "" Or CboTipoEmpleado.Text = "" Then
-            MsgBox("No puede dejar campos vacios.")
+        If Validar() = False Then
         Else
             AgregarContratoEmpleado()
             TxtFechaFinal.Text = ""
@@ -127,6 +126,49 @@ Public Class FrmContratoEmpleado
         CargarBeneficiario()
         CargarTipoContrato()
         CargarTipoEmpleado()
+        CboBeneficiario.Text = ""
+        CboTipoContrato.Text = ""
+        CboTipoEmpleado.Text = ""
 
     End Sub
+    Private Function Validar() As Boolean
+        Dim estado As Boolean
+        If CboTipoEmpleado.Text = "" And TxtFechaFinal.Text = "" And TxtFechaInicio.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
+            EpError.SetError(CboTipoEmpleado, "Campo Obligatorio")
+            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
+            EpError.SetError(TxtFechaInicio, "Campo Obligatorio")
+            EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
+            EpError.SetError(CboTipoContrato, "Campo Obligatorio")
+            EpError.SetError(CboBeneficiario, "Campo Obligatorio")
+            estado = False
+        ElseIf TxtFechaFinal.Text = "" And TxtFechaInicio.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
+            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
+            EpError.SetError(TxtFechaInicio, "Campo Obligatorio")
+            EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
+            EpError.SetError(CboTipoContrato, "Campo Obligatorio")
+            EpError.SetError(CboBeneficiario, "Campo Obligatorio")
+            estado = False
+        ElseIf TxtFechaInicio.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
+            EpError.SetError(TxtFechaInicio, "Campo Obligatorio")
+            EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
+            EpError.SetError(CboTipoContrato, "Campo Obligatorio")
+            EpError.SetError(CboBeneficiario, "Campo Obligatorio")
+            estado = False
+        ElseIf TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
+            EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
+            EpError.SetError(CboTipoContrato, "Campo Obligatorio")
+            EpError.SetError(CboBeneficiario, "Campo Obligatorio")
+            estado = False
+        ElseIf CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
+            EpError.SetError(CboTipoContrato, "Campo Obligatorio")
+            EpError.SetError(CboBeneficiario, "Campo Obligatorio")
+            estado = False
+        ElseIf CboBeneficiario.Text = "" Then
+            EpError.SetError(CboBeneficiario, "Campo Obligatorio")
+            estado = False
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
 End Class

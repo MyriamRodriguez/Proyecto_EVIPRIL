@@ -66,8 +66,7 @@ Public Class FrmContratoCliente
     End Sub
 
     Private Sub PbxGuardar_Click(sender As Object, e As EventArgs) Handles PbxGuardar.Click
-        If TxtFechaInico.Text = "" Or TxtFechaInico.Text = "" Or CboNombreCliente.Text = "" Or TxtNguardias.Text = "" Or TxtObservaciones.Text = "" Then
-            MsgBox("No puede dejar campos vacios.")
+        If validar() = False Then
         Else
             AgregarContrato()
             TxtFechaFinal.Text = ""
@@ -78,4 +77,36 @@ Public Class FrmContratoCliente
             TxtFechaInico.Focus()
         End If
     End Sub
+
+    Private Function validar() As Boolean
+        Dim estado As Boolean
+        If TxtFechaInico.Text = "" And TxtFechaFinal.Text = "" And TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
+            EpError.SetError(TxtFechaInico, "Campo Obligatorio")
+            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
+            EpError.SetError(TxtNguardias, "Campo Obligatorio")
+            EpError.SetError(TxtObservaciones, "Campo Obligatorio")
+            EpError.SetError(CboNombreCliente, "Campo Obligatorio")
+            estado = False
+        ElseIf TxtFechaFinal.Text = "" And TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
+            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
+            EpError.SetError(TxtNguardias, "Campo Obligatorio")
+            EpError.SetError(TxtObservaciones, "Campo Obligatorio")
+            EpError.SetError(CboNombreCliente, "Campo Obligatorio")
+            estado = False
+        ElseIf TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
+            EpError.SetError(TxtNguardias, "Campo Obligatorio")
+            EpError.SetError(TxtObservaciones, "Campo Obligatorio")
+            EpError.SetError(CboNombreCliente, "Campo Obligatorio")
+            estado = False
+        ElseIf TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
+            EpError.SetError(TxtObservaciones, "Campo Obligatorio")
+            EpError.SetError(CboNombreCliente, "Campo Obligatorio")
+            estado = False
+        ElseIf CboNombreCliente.Text = "" Then
+            EpError.SetError(CboNombreCliente, "Campo Obligatorio")
+        Else
+            estado = True
+        End If
+        Return estado
+    End Function
 End Class
