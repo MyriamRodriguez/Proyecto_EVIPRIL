@@ -33,8 +33,6 @@ Partial Class FrmContratoEmpleado
         Me.CboTipoEmpleado = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TxtNumIdentidad = New System.Windows.Forms.TextBox()
-        Me.TxtFechaFinal = New System.Windows.Forms.TextBox()
-        Me.TxtFechaInicio = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -42,8 +40,9 @@ Partial Class FrmContratoEmpleado
         Me.Label2 = New System.Windows.Forms.Label()
         Me.CboTipoContrato = New System.Windows.Forms.ComboBox()
         Me.CboBeneficiario = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.DtpFechaInicio = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFechaFinal = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,25 +134,11 @@ Partial Class FrmContratoEmpleado
         '
         'TxtNumIdentidad
         '
-        Me.TxtNumIdentidad.Location = New System.Drawing.Point(572, 260)
+        Me.TxtNumIdentidad.Location = New System.Drawing.Point(572, 231)
         Me.TxtNumIdentidad.Multiline = True
         Me.TxtNumIdentidad.Name = "TxtNumIdentidad"
         Me.TxtNumIdentidad.Size = New System.Drawing.Size(144, 20)
         Me.TxtNumIdentidad.TabIndex = 66
-        '
-        'TxtFechaFinal
-        '
-        Me.TxtFechaFinal.Location = New System.Drawing.Point(230, 231)
-        Me.TxtFechaFinal.Name = "TxtFechaFinal"
-        Me.TxtFechaFinal.Size = New System.Drawing.Size(144, 20)
-        Me.TxtFechaFinal.TabIndex = 63
-        '
-        'TxtFechaInicio
-        '
-        Me.TxtFechaInicio.Location = New System.Drawing.Point(230, 188)
-        Me.TxtFechaInicio.Name = "TxtFechaInicio"
-        Me.TxtFechaInicio.Size = New System.Drawing.Size(144, 20)
-        Me.TxtFechaInicio.TabIndex = 62
         '
         'Label6
         '
@@ -169,7 +154,7 @@ Partial Class FrmContratoEmpleado
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(444, 259)
+        Me.Label5.Location = New System.Drawing.Point(444, 230)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(110, 18)
         Me.Label5.TabIndex = 59
@@ -227,21 +212,26 @@ Partial Class FrmContratoEmpleado
         Me.CboBeneficiario.TabIndex = 70
         Me.CboBeneficiario.Text = "Seleccione...."
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(457, 230)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(148, 13)
-        Me.Label1.TabIndex = 71
-        Me.Label1.Text = "Reguistrar Nuevo Beneficiario"
-        '
         'EpError
         '
         Me.EpError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.EpError.ContainerControl = Me
+        '
+        'DtpFechaInicio
+        '
+        Me.DtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaInicio.Location = New System.Drawing.Point(230, 188)
+        Me.DtpFechaInicio.Name = "DtpFechaInicio"
+        Me.DtpFechaInicio.Size = New System.Drawing.Size(144, 20)
+        Me.DtpFechaInicio.TabIndex = 71
+        '
+        'DtpFechaFinal
+        '
+        Me.DtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaFinal.Location = New System.Drawing.Point(230, 231)
+        Me.DtpFechaFinal.Name = "DtpFechaFinal"
+        Me.DtpFechaFinal.Size = New System.Drawing.Size(144, 20)
+        Me.DtpFechaFinal.TabIndex = 72
         '
         'FrmContratoEmpleado
         '
@@ -249,14 +239,13 @@ Partial Class FrmContratoEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(777, 429)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.DtpFechaFinal)
+        Me.Controls.Add(Me.DtpFechaInicio)
         Me.Controls.Add(Me.CboBeneficiario)
         Me.Controls.Add(Me.CboTipoContrato)
         Me.Controls.Add(Me.CboTipoEmpleado)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.TxtNumIdentidad)
-        Me.Controls.Add(Me.TxtFechaFinal)
-        Me.Controls.Add(Me.TxtFechaInicio)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -266,6 +255,7 @@ Partial Class FrmContratoEmpleado
         Me.Controls.Add(Me.Panel1)
         Me.Name = "FrmContratoEmpleado"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = " "
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -287,8 +277,6 @@ Partial Class FrmContratoEmpleado
     Friend WithEvents CboTipoEmpleado As ComboBox
     Friend WithEvents Label9 As Label
     Friend WithEvents TxtNumIdentidad As TextBox
-    Friend WithEvents TxtFechaFinal As TextBox
-    Friend WithEvents TxtFechaInicio As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -296,6 +284,7 @@ Partial Class FrmContratoEmpleado
     Friend WithEvents Label2 As Label
     Friend WithEvents CboTipoContrato As ComboBox
     Friend WithEvents CboBeneficiario As ComboBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents EpError As ErrorProvider
+    Friend WithEvents DtpFechaFinal As DateTimePicker
+    Friend WithEvents DtpFechaInicio As DateTimePicker
 End Class

@@ -22,8 +22,8 @@ Public Class FrmContratoEmpleado
                     .CommandText = "InsertContratoEmpleado"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cnn
-                    .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = TxtFechaFinal.Text
-                    .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = TxtFechaFinal.Text
+                    .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = DtpFechaInicio.Value
+                    .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = DtpFechaFinal.Value
                     .Parameters.Add("@IdTipoContrato", SqlDbType.Int).Value = CboTipoContrato.SelectedValue
                     .Parameters.Add("@IdBeneficiario", SqlDbType.Int).Value = CboBeneficiario.SelectedValue
                     .Parameters.Add("@NumeroIdentidad", SqlDbType.Int).Value = TxtNumIdentidad.Text

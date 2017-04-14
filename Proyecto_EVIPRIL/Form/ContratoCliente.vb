@@ -24,8 +24,8 @@ Public Class FrmContratoCliente
                     .CommandText = "InsertContratoCliente"
                     .CommandType = CommandType.StoredProcedure
                     .Connection = cnn
-                    .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = TxtFechaInico.Text
-                    .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = TxtFechaFinal.Text
+                    .Parameters.Add("@FechaInicio", SqlDbType.Date).Value = DtpFechaInicio.Value
+                    .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = DtpFechaFinal.Value
                     .Parameters.Add("@IdCliente", SqlDbType.Int).Value = CboNombreCliente.SelectedValue
                     .Parameters.Add("@Observacion", SqlDbType.NVarChar).Value = TxtObservaciones.Text
                     .Parameters.Add("@NumeroGuardia", SqlDbType.Int).Value = TxtNguardias.Text

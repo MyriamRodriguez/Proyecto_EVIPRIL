@@ -32,8 +32,6 @@ Partial Class FrmContratoCliente
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.TxtObservaciones = New System.Windows.Forms.TextBox()
         Me.TxtNguardias = New System.Windows.Forms.TextBox()
-        Me.TxtFechaFinal = New System.Windows.Forms.TextBox()
-        Me.TxtFechaInico = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -41,6 +39,8 @@ Partial Class FrmContratoCliente
         Me.Label1 = New System.Windows.Forms.Label()
         Me.CboNombreCliente = New System.Windows.Forms.ComboBox()
         Me.EpError = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.DtpFechaInicio = New System.Windows.Forms.DateTimePicker()
+        Me.DtpFechaFinal = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -124,20 +124,6 @@ Partial Class FrmContratoCliente
         Me.TxtNguardias.Size = New System.Drawing.Size(132, 20)
         Me.TxtNguardias.TabIndex = 64
         '
-        'TxtFechaFinal
-        '
-        Me.TxtFechaFinal.Location = New System.Drawing.Point(326, 169)
-        Me.TxtFechaFinal.Name = "TxtFechaFinal"
-        Me.TxtFechaFinal.Size = New System.Drawing.Size(132, 20)
-        Me.TxtFechaFinal.TabIndex = 62
-        '
-        'TxtFechaInico
-        '
-        Me.TxtFechaInico.Location = New System.Drawing.Point(326, 129)
-        Me.TxtFechaInico.Name = "TxtFechaInico"
-        Me.TxtFechaInico.Size = New System.Drawing.Size(132, 20)
-        Me.TxtFechaInico.TabIndex = 61
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -201,18 +187,34 @@ Partial Class FrmContratoCliente
         Me.EpError.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
         Me.EpError.ContainerControl = Me
         '
+        'DtpFechaInicio
+        '
+        Me.DtpFechaInicio.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaInicio.Location = New System.Drawing.Point(326, 133)
+        Me.DtpFechaInicio.Name = "DtpFechaInicio"
+        Me.DtpFechaInicio.Size = New System.Drawing.Size(132, 20)
+        Me.DtpFechaInicio.TabIndex = 68
+        '
+        'DtpFechaFinal
+        '
+        Me.DtpFechaFinal.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpFechaFinal.Location = New System.Drawing.Point(326, 169)
+        Me.DtpFechaFinal.Name = "DtpFechaFinal"
+        Me.DtpFechaFinal.Size = New System.Drawing.Size(132, 20)
+        Me.DtpFechaFinal.TabIndex = 69
+        '
         'FrmContratoCliente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(728, 468)
+        Me.Controls.Add(Me.DtpFechaFinal)
+        Me.Controls.Add(Me.DtpFechaInicio)
         Me.Controls.Add(Me.CboNombreCliente)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TxtObservaciones)
         Me.Controls.Add(Me.TxtNguardias)
-        Me.Controls.Add(Me.TxtFechaFinal)
-        Me.Controls.Add(Me.TxtFechaInico)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label3)
@@ -241,8 +243,6 @@ Partial Class FrmContratoCliente
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents TxtObservaciones As TextBox
     Friend WithEvents TxtNguardias As TextBox
-    Friend WithEvents TxtFechaFinal As TextBox
-    Friend WithEvents TxtFechaInico As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label3 As Label
@@ -250,4 +250,6 @@ Partial Class FrmContratoCliente
     Friend WithEvents Label1 As Label
     Friend WithEvents CboNombreCliente As ComboBox
     Friend WithEvents EpError As ErrorProvider
+    Friend WithEvents DtpFechaFinal As DateTimePicker
+    Friend WithEvents DtpFechaInicio As DateTimePicker
 End Class

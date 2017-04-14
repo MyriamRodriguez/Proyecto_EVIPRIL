@@ -16,7 +16,7 @@
         If CboTipoContrato.Text = "Cliente" Then
             FrmContratoCliente.Show()
             Me.Hide()
-        ElseIf CboTipoContrato.Text = "Emleado" Then
+        ElseIf CboTipoContrato.Text = "Empleado" Then
             FrmContratoEmpleado.Show()
             Me.Hide()
         End If
@@ -31,4 +31,8 @@
         End If
         Return estado
     End Function
+
+    Private Sub CboTipoContrato_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CboTipoContrato.SelectedIndexChanged
+
+    End Sub
 End Class
