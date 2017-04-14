@@ -26,7 +26,7 @@ Public Class FrmContratoEmpleado
                     .Parameters.Add("@FechaFinal", SqlDbType.Date).Value = DtpFechaFinal.Value
                     .Parameters.Add("@IdTipoContrato", SqlDbType.Int).Value = CboTipoContrato.SelectedValue
                     .Parameters.Add("@IdBeneficiario", SqlDbType.Int).Value = CboBeneficiario.SelectedValue
-                    .Parameters.Add("@NumeroIdentidad", SqlDbType.Int).Value = TxtNumIdentidad.Text
+                    .Parameters.Add("@NumIdentidad", SqlDbType.Char).Value = TxtNumIdentidad.Text
                     .Parameters.Add("@IdTipoEmpleado", SqlDbType.Int).Value = CboTipoEmpleado.SelectedValue
 
 
@@ -113,8 +113,6 @@ Public Class FrmContratoEmpleado
         If Validar() = False Then
         Else
             AgregarContratoEmpleado()
-            TxtFechaFinal.Text = ""
-            TxtFechaInicio.Text = ""
             TxtNumIdentidad.Text = ""
             CboBeneficiario.Text = ""
             CboTipoContrato.Text = ""
@@ -133,23 +131,18 @@ Public Class FrmContratoEmpleado
     End Sub
     Private Function Validar() As Boolean
         Dim estado As Boolean
-        If CboTipoEmpleado.Text = "" And TxtFechaFinal.Text = "" And TxtFechaInicio.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
+        If CboTipoEmpleado.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
             EpError.SetError(CboTipoEmpleado, "Campo Obligatorio")
-            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
-            EpError.SetError(TxtFechaInicio, "Campo Obligatorio")
             EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
             EpError.SetError(CboTipoContrato, "Campo Obligatorio")
             EpError.SetError(CboBeneficiario, "Campo Obligatorio")
             estado = False
-        ElseIf TxtFechaFinal.Text = "" And TxtFechaInicio.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
-            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
-            EpError.SetError(TxtFechaInicio, "Campo Obligatorio")
+        ElseIf TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
             EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
             EpError.SetError(CboTipoContrato, "Campo Obligatorio")
             EpError.SetError(CboBeneficiario, "Campo Obligatorio")
             estado = False
-        ElseIf TxtFechaInicio.Text = "" And TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
-            EpError.SetError(TxtFechaInicio, "Campo Obligatorio")
+        ElseIf TxtNumIdentidad.Text = "" And CboTipoContrato.Text = "" And CboBeneficiario.Text = "" Then
             EpError.SetError(TxtNumIdentidad, "Campo Obligatorio")
             EpError.SetError(CboTipoContrato, "Campo Obligatorio")
             EpError.SetError(CboBeneficiario, "Campo Obligatorio")

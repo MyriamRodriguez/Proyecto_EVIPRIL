@@ -126,8 +126,11 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub txtNumIdentidad_TextChanged(sender As Object, e As EventArgs) Handles txtNumIdentidad.TextChanged
-        If txtNumIdentidad.Text <> "" Then
+        If txtNumIdentidad.Text = "" Then
             AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
+        ElseIf txtNumIdentidad.Text <> "" Then
+            AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
+
         End If
     End Sub
 
@@ -234,3 +237,4 @@ Public Class FrmEmpleado
         Call Editar()
     End Sub
 End Class
+

@@ -69,26 +69,21 @@ Public Class FrmContratoCliente
         If validar() = False Then
         Else
             AgregarContrato()
-            TxtFechaFinal.Text = ""
-            TxtFechaInico.Text = ""
+
             TxtNguardias.Text = ""
             TxtObservaciones.Text = ""
             CboNombreCliente.Text = ""
-            TxtFechaInico.Focus()
         End If
     End Sub
 
     Private Function validar() As Boolean
         Dim estado As Boolean
-        If TxtFechaInico.Text = "" And TxtFechaFinal.Text = "" And TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
-            EpError.SetError(TxtFechaInico, "Campo Obligatorio")
-            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
+        If TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
             EpError.SetError(TxtNguardias, "Campo Obligatorio")
             EpError.SetError(TxtObservaciones, "Campo Obligatorio")
             EpError.SetError(CboNombreCliente, "Campo Obligatorio")
             estado = False
-        ElseIf TxtFechaFinal.Text = "" And TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
-            EpError.SetError(TxtFechaFinal, "Campo Obligatorio")
+        ElseIf TxtNguardias.Text = "" And TxtObservaciones.Text = "" And CboNombreCliente.Text = "" Then
             EpError.SetError(TxtNguardias, "Campo Obligatorio")
             EpError.SetError(TxtObservaciones, "Campo Obligatorio")
             EpError.SetError(CboNombreCliente, "Campo Obligatorio")

@@ -22,6 +22,7 @@
         Dim datos = (From a In ctx.Empleado
                      Where a.NumIdentidad = cuenta
                      Select a).SingleOrDefault
+
         txt2.Text = datos.Nombres
         txt3.Text = datos.Apellidos
         txt4.Text = datos.Telefono
