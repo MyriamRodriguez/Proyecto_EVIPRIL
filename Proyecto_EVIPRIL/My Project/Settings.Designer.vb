@@ -57,7 +57,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;Initial Catalog=SeguridadLeon;Integrated Security=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MYLI\SQLEXPRESS;Initial Catalog=SeguridadLeon;Integrated Security=Tru"& _ 
+            "e")>  _
         Public ReadOnly Property ConexionEVIPRIL() As String
             Get
                 Return CType(Me("ConexionEVIPRIL"),String)
@@ -67,8 +68,8 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=.\SQLEXPRESS;Initial Catalog=SeguridadLeon;Integrated Security=True;E"& _ 
-            "ncrypt=False;TrustServerCertificate=True")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=MYLI\SQLEXPRESS;Initial Catalog=SeguridadLeon;Integrated Security=Tru"& _ 
+            "e;Encrypt=False;TrustServerCertificate=True")>  _
         Public ReadOnly Property SeguridadLeonConnectionString() As String
             Get
                 Return CType(Me("SeguridadLeonConnectionString"),String)

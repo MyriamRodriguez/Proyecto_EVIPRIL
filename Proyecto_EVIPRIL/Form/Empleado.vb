@@ -85,19 +85,17 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
-        If Validar() = True Then
-            Validar()
-        Else
-            AgregarEmpleado()
-            txtNumIdentidad.Clear()
-            txtNombre.Text = ""
-            txtApellido.Text = ""
-            txtTelefono.Text = ""
-            txtDireccion.Text = ""
-            txtNumCuenta.Text = ""
-            cboProfesion.Text = ""
-            cboEstadoCivil.Text = ""
-        End If
+
+        AgregarEmpleado()
+        txtNumIdentidad.Clear()
+        txtNombre.Text = ""
+        txtApellido.Text = ""
+        txtTelefono.Text = ""
+        txtDireccion.Text = ""
+        txtNumCuenta.Text = ""
+        cboProfesion.Text = ""
+        cboEstadoCivil.Text = ""
+
 
     End Sub
 
@@ -123,15 +121,15 @@ Public Class FrmEmpleado
 
     Public Sub ObtenerCuenta(cuenta As String) Implements IForm.ObtenerCuenta
         txtNumIdentidad.Text = cuenta
+        AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
     End Sub
 
     Private Sub txtNumIdentidad_TextChanged(sender As Object, e As EventArgs) Handles txtNumIdentidad.TextChanged
-        If txtNumIdentidad.Text = "" Then
-            AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
-        ElseIf txtNumIdentidad.Text <> "" Then
-            AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
-
-        End If
+        'If txtNumIdentidad.Text = "" Then
+        'AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
+        'ElseIf txtNumIdentidad.TextLength = 13 Then
+        'AccesoDatos.CargarDatosEmpleado(txtNumIdentidad.Text, txtNombre, txtApellido, txtTelefono, txtDireccion, dtpFechaNacimiento, txtNumCuenta, cboProfesion, cboEstadoCivil)
+        'End If
     End Sub
 
     Private Function Validar() As Boolean

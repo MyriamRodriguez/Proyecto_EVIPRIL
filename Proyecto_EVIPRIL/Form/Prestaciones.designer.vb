@@ -24,13 +24,11 @@ Partial Class FrmPrestaciones
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmPrestaciones))
         Me.LblCodigo = New System.Windows.Forms.Label()
-        Me.TxtCodigo = New System.Windows.Forms.TextBox()
+        Me.txtNumIdentidadEmpleado = New System.Windows.Forms.TextBox()
         Me.LblNombre = New System.Windows.Forms.Label()
         Me.TxtNombre = New System.Windows.Forms.TextBox()
         Me.LblTercerMes = New System.Windows.Forms.Label()
         Me.LblCuartoMesPagado = New System.Windows.Forms.Label()
-        Me.TxtTercerMes = New System.Windows.Forms.TextBox()
-        Me.TxtCuartoMes = New System.Windows.Forms.TextBox()
         Me.LblPreaviso = New System.Windows.Forms.Label()
         Me.CboPreaviso = New System.Windows.Forms.ComboBox()
         Me.LblPorcentaje = New System.Windows.Forms.Label()
@@ -52,25 +50,25 @@ Partial Class FrmPrestaciones
         Me.TxtDia1 = New System.Windows.Forms.TextBox()
         Me.LblDia1 = New System.Windows.Forms.Label()
         Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.TxtAñoAnti = New System.Windows.Forms.TextBox()
+        Me.TxtAnioAnti = New System.Windows.Forms.TextBox()
         Me.LblAñoAnti = New System.Windows.Forms.Label()
         Me.TxtMesAnti = New System.Windows.Forms.TextBox()
         Me.LblMesAnti = New System.Windows.Forms.Label()
-        Me.TxtDiaanti = New System.Windows.Forms.TextBox()
+        Me.TxtDiaAnti = New System.Windows.Forms.TextBox()
         Me.LblDiaanti = New System.Windows.Forms.Label()
         Me.LblTiempoAnti = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TxtSDME = New System.Windows.Forms.TextBox()
         Me.LblDiarioExtra = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtSMME = New System.Windows.Forms.TextBox()
         Me.LblMensualExtra = New System.Windows.Forms.Label()
-        Me.TxtOrdiProDiario = New System.Windows.Forms.TextBox()
+        Me.TxtSOPD = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtSOPM = New System.Windows.Forms.TextBox()
         Me.LblOrdiProMensual = New System.Windows.Forms.Label()
-        Me.TxtDiario = New System.Windows.Forms.TextBox()
+        Me.TxtSOD = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TxtOrdinario = New System.Windows.Forms.TextBox()
+        Me.TxtSOM = New System.Windows.Forms.TextBox()
         Me.LblOrdinario = New System.Windows.Forms.Label()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -175,6 +173,8 @@ Partial Class FrmPrestaciones
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.MaskedTextBox1 = New System.Windows.Forms.MaskedTextBox()
+        Me.MaskedTextBox2 = New System.Windows.Forms.MaskedTextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
@@ -203,12 +203,12 @@ Partial Class FrmPrestaciones
         Me.LblCodigo.TabIndex = 0
         Me.LblCodigo.Text = "Codigo"
         '
-        'TxtCodigo
+        'txtNumIdentidadEmpleado
         '
-        Me.TxtCodigo.Location = New System.Drawing.Point(103, 103)
-        Me.TxtCodigo.Name = "TxtCodigo"
-        Me.TxtCodigo.Size = New System.Drawing.Size(184, 20)
-        Me.TxtCodigo.TabIndex = 1
+        Me.txtNumIdentidadEmpleado.Location = New System.Drawing.Point(103, 103)
+        Me.txtNumIdentidadEmpleado.Name = "txtNumIdentidadEmpleado"
+        Me.txtNumIdentidadEmpleado.Size = New System.Drawing.Size(184, 20)
+        Me.txtNumIdentidadEmpleado.TabIndex = 1
         '
         'LblNombre
         '
@@ -249,20 +249,6 @@ Partial Class FrmPrestaciones
         Me.LblCuartoMesPagado.TabIndex = 5
         Me.LblCuartoMesPagado.Text = "Ultimo Decimo Cuarto Mes Pagado"
         '
-        'TxtTercerMes
-        '
-        Me.TxtTercerMes.Location = New System.Drawing.Point(530, 74)
-        Me.TxtTercerMes.Name = "TxtTercerMes"
-        Me.TxtTercerMes.Size = New System.Drawing.Size(100, 20)
-        Me.TxtTercerMes.TabIndex = 6
-        '
-        'TxtCuartoMes
-        '
-        Me.TxtCuartoMes.Location = New System.Drawing.Point(529, 103)
-        Me.TxtCuartoMes.Name = "TxtCuartoMes"
-        Me.TxtCuartoMes.Size = New System.Drawing.Size(100, 20)
-        Me.TxtCuartoMes.TabIndex = 7
-        '
         'LblPreaviso
         '
         Me.LblPreaviso.AutoSize = True
@@ -292,7 +278,7 @@ Partial Class FrmPrestaciones
         'CboPorcentaje
         '
         Me.CboPorcentaje.FormattingEnabled = True
-        Me.CboPorcentaje.Location = New System.Drawing.Point(762, 131)
+        Me.CboPorcentaje.Location = New System.Drawing.Point(760, 135)
         Me.CboPorcentaje.Name = "CboPorcentaje"
         Me.CboPorcentaje.Size = New System.Drawing.Size(57, 21)
         Me.CboPorcentaje.TabIndex = 11
@@ -448,11 +434,11 @@ Partial Class FrmPrestaciones
         'Panel4
         '
         Me.Panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel4.Controls.Add(Me.TxtAñoAnti)
+        Me.Panel4.Controls.Add(Me.TxtAnioAnti)
         Me.Panel4.Controls.Add(Me.LblAñoAnti)
         Me.Panel4.Controls.Add(Me.TxtMesAnti)
         Me.Panel4.Controls.Add(Me.LblMesAnti)
-        Me.Panel4.Controls.Add(Me.TxtDiaanti)
+        Me.Panel4.Controls.Add(Me.TxtDiaAnti)
         Me.Panel4.Controls.Add(Me.LblDiaanti)
         Me.Panel4.Controls.Add(Me.LblTiempoAnti)
         Me.Panel4.Location = New System.Drawing.Point(558, 171)
@@ -460,12 +446,12 @@ Partial Class FrmPrestaciones
         Me.Panel4.Size = New System.Drawing.Size(401, 52)
         Me.Panel4.TabIndex = 14
         '
-        'TxtAñoAnti
+        'TxtAnioAnti
         '
-        Me.TxtAñoAnti.Location = New System.Drawing.Point(177, 17)
-        Me.TxtAñoAnti.Name = "TxtAñoAnti"
-        Me.TxtAñoAnti.Size = New System.Drawing.Size(89, 20)
-        Me.TxtAñoAnti.TabIndex = 11
+        Me.TxtAnioAnti.Location = New System.Drawing.Point(177, 17)
+        Me.TxtAnioAnti.Name = "TxtAnioAnti"
+        Me.TxtAnioAnti.Size = New System.Drawing.Size(89, 20)
+        Me.TxtAnioAnti.TabIndex = 11
         '
         'LblAñoAnti
         '
@@ -492,12 +478,12 @@ Partial Class FrmPrestaciones
         Me.LblMesAnti.TabIndex = 8
         Me.LblMesAnti.Text = "Mes"
         '
-        'TxtDiaanti
+        'TxtDiaAnti
         '
-        Me.TxtDiaanti.Location = New System.Drawing.Point(39, 17)
-        Me.TxtDiaanti.Name = "TxtDiaanti"
-        Me.TxtDiaanti.Size = New System.Drawing.Size(33, 20)
-        Me.TxtDiaanti.TabIndex = 7
+        Me.TxtDiaAnti.Location = New System.Drawing.Point(39, 17)
+        Me.TxtDiaAnti.Name = "TxtDiaAnti"
+        Me.TxtDiaAnti.Size = New System.Drawing.Size(33, 20)
+        Me.TxtDiaAnti.TabIndex = 7
         '
         'LblDiaanti
         '
@@ -522,29 +508,29 @@ Partial Class FrmPrestaciones
         'Panel3
         '
         Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.TxtSDME)
         Me.Panel3.Controls.Add(Me.LblDiarioExtra)
-        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.TxtSMME)
         Me.Panel3.Controls.Add(Me.LblMensualExtra)
-        Me.Panel3.Controls.Add(Me.TxtOrdiProDiario)
+        Me.Panel3.Controls.Add(Me.TxtSOPD)
         Me.Panel3.Controls.Add(Me.Label2)
-        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.TxtSOPM)
         Me.Panel3.Controls.Add(Me.LblOrdiProMensual)
-        Me.Panel3.Controls.Add(Me.TxtDiario)
+        Me.Panel3.Controls.Add(Me.TxtSOD)
         Me.Panel3.Controls.Add(Me.Label1)
-        Me.Panel3.Controls.Add(Me.TxtOrdinario)
+        Me.Panel3.Controls.Add(Me.TxtSOM)
         Me.Panel3.Controls.Add(Me.LblOrdinario)
         Me.Panel3.Location = New System.Drawing.Point(0, 222)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(959, 50)
         Me.Panel3.TabIndex = 15
         '
-        'TextBox1
+        'TxtSDME
         '
-        Me.TextBox1.Location = New System.Drawing.Point(800, 22)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox1.TabIndex = 11
+        Me.TxtSDME.Location = New System.Drawing.Point(800, 22)
+        Me.TxtSDME.Name = "TxtSDME"
+        Me.TxtSDME.Size = New System.Drawing.Size(136, 20)
+        Me.TxtSDME.TabIndex = 11
         '
         'LblDiarioExtra
         '
@@ -555,12 +541,12 @@ Partial Class FrmPrestaciones
         Me.LblDiarioExtra.TabIndex = 10
         Me.LblDiarioExtra.Text = "Salario Diario Mas Extra"
         '
-        'TextBox3
+        'TxtSMME
         '
-        Me.TextBox3.Location = New System.Drawing.Point(800, 1)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox3.TabIndex = 9
+        Me.TxtSMME.Location = New System.Drawing.Point(800, 1)
+        Me.TxtSMME.Name = "TxtSMME"
+        Me.TxtSMME.Size = New System.Drawing.Size(136, 20)
+        Me.TxtSMME.TabIndex = 9
         '
         'LblMensualExtra
         '
@@ -571,12 +557,12 @@ Partial Class FrmPrestaciones
         Me.LblMensualExtra.TabIndex = 8
         Me.LblMensualExtra.Text = "Salario Mensual Mas Extras"
         '
-        'TxtOrdiProDiario
+        'TxtSOPD
         '
-        Me.TxtOrdiProDiario.Location = New System.Drawing.Point(461, 22)
-        Me.TxtOrdiProDiario.Name = "TxtOrdiProDiario"
-        Me.TxtOrdiProDiario.Size = New System.Drawing.Size(136, 20)
-        Me.TxtOrdiProDiario.TabIndex = 7
+        Me.TxtSOPD.Location = New System.Drawing.Point(461, 22)
+        Me.TxtSOPD.Name = "TxtSOPD"
+        Me.TxtSOPD.Size = New System.Drawing.Size(136, 20)
+        Me.TxtSOPD.TabIndex = 7
         '
         'Label2
         '
@@ -587,12 +573,12 @@ Partial Class FrmPrestaciones
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Salario Ordinario Promedio Diario"
         '
-        'TextBox2
+        'TxtSOPM
         '
-        Me.TextBox2.Location = New System.Drawing.Point(461, 1)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(136, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.TxtSOPM.Location = New System.Drawing.Point(461, 1)
+        Me.TxtSOPM.Name = "TxtSOPM"
+        Me.TxtSOPM.Size = New System.Drawing.Size(136, 20)
+        Me.TxtSOPM.TabIndex = 5
         '
         'LblOrdiProMensual
         '
@@ -603,12 +589,12 @@ Partial Class FrmPrestaciones
         Me.LblOrdiProMensual.TabIndex = 4
         Me.LblOrdiProMensual.Text = "Salario Ordinario Promedio Mensual"
         '
-        'TxtDiario
+        'TxtSOD
         '
-        Me.TxtDiario.Location = New System.Drawing.Point(137, 23)
-        Me.TxtDiario.Name = "TxtDiario"
-        Me.TxtDiario.Size = New System.Drawing.Size(136, 20)
-        Me.TxtDiario.TabIndex = 3
+        Me.TxtSOD.Location = New System.Drawing.Point(137, 23)
+        Me.TxtSOD.Name = "TxtSOD"
+        Me.TxtSOD.Size = New System.Drawing.Size(136, 20)
+        Me.TxtSOD.TabIndex = 3
         '
         'Label1
         '
@@ -619,12 +605,12 @@ Partial Class FrmPrestaciones
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Salario Ordinario Diario"
         '
-        'TxtOrdinario
+        'TxtSOM
         '
-        Me.TxtOrdinario.Location = New System.Drawing.Point(137, 2)
-        Me.TxtOrdinario.Name = "TxtOrdinario"
-        Me.TxtOrdinario.Size = New System.Drawing.Size(136, 20)
-        Me.TxtOrdinario.TabIndex = 1
+        Me.TxtSOM.Location = New System.Drawing.Point(137, 2)
+        Me.TxtSOM.Name = "TxtSOM"
+        Me.TxtSOM.Size = New System.Drawing.Size(136, 20)
+        Me.TxtSOM.TabIndex = 1
         '
         'LblOrdinario
         '
@@ -1172,21 +1158,21 @@ Partial Class FrmPrestaciones
         '
         'TextBox28
         '
-        Me.TextBox28.Location = New System.Drawing.Point(240, 73)
+        Me.TextBox28.Location = New System.Drawing.Point(252, 73)
         Me.TextBox28.Name = "TextBox28"
         Me.TextBox28.Size = New System.Drawing.Size(89, 20)
         Me.TextBox28.TabIndex = 21
         '
         'TextBox29
         '
-        Me.TextBox29.Location = New System.Drawing.Point(240, 52)
+        Me.TextBox29.Location = New System.Drawing.Point(252, 52)
         Me.TextBox29.Name = "TextBox29"
         Me.TextBox29.Size = New System.Drawing.Size(89, 20)
         Me.TextBox29.TabIndex = 20
         '
         'TextBox30
         '
-        Me.TextBox30.Location = New System.Drawing.Point(240, 31)
+        Me.TextBox30.Location = New System.Drawing.Point(252, 30)
         Me.TextBox30.Name = "TextBox30"
         Me.TextBox30.Size = New System.Drawing.Size(89, 20)
         Me.TextBox30.TabIndex = 19
@@ -1598,6 +1584,24 @@ Partial Class FrmPrestaciones
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'MaskedTextBox1
+        '
+        Me.MaskedTextBox1.Location = New System.Drawing.Point(503, 75)
+        Me.MaskedTextBox1.Mask = "00/00/0000"
+        Me.MaskedTextBox1.Name = "MaskedTextBox1"
+        Me.MaskedTextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.MaskedTextBox1.TabIndex = 26
+        Me.MaskedTextBox1.ValidatingType = GetType(Date)
+        '
+        'MaskedTextBox2
+        '
+        Me.MaskedTextBox2.Location = New System.Drawing.Point(503, 104)
+        Me.MaskedTextBox2.Mask = "00/00/0000"
+        Me.MaskedTextBox2.Name = "MaskedTextBox2"
+        Me.MaskedTextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.MaskedTextBox2.TabIndex = 27
+        Me.MaskedTextBox2.ValidatingType = GetType(Date)
+        '
         'FrmPrestaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1605,6 +1609,8 @@ Partial Class FrmPrestaciones
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(254, Byte), Integer), CType(CType(165, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(954, 639)
+        Me.Controls.Add(Me.MaskedTextBox2)
+        Me.Controls.Add(Me.MaskedTextBox1)
         Me.Controls.Add(Me.Panel11)
         Me.Controls.Add(Me.Panel10)
         Me.Controls.Add(Me.Panel9)
@@ -1620,13 +1626,11 @@ Partial Class FrmPrestaciones
         Me.Controls.Add(Me.LblPorcentaje)
         Me.Controls.Add(Me.CboPreaviso)
         Me.Controls.Add(Me.LblPreaviso)
-        Me.Controls.Add(Me.TxtCuartoMes)
-        Me.Controls.Add(Me.TxtTercerMes)
         Me.Controls.Add(Me.LblCuartoMesPagado)
         Me.Controls.Add(Me.LblTercerMes)
         Me.Controls.Add(Me.TxtNombre)
         Me.Controls.Add(Me.LblNombre)
-        Me.Controls.Add(Me.TxtCodigo)
+        Me.Controls.Add(Me.txtNumIdentidadEmpleado)
         Me.Controls.Add(Me.LblCodigo)
         Me.ForeColor = System.Drawing.SystemColors.ControlText
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
@@ -1664,13 +1668,11 @@ Partial Class FrmPrestaciones
     End Sub
 
     Friend WithEvents LblCodigo As Label
-    Friend WithEvents TxtCodigo As TextBox
+    Friend WithEvents txtNumIdentidadEmpleado As TextBox
     Friend WithEvents LblNombre As Label
     Friend WithEvents TxtNombre As TextBox
     Friend WithEvents LblTercerMes As Label
     Friend WithEvents LblCuartoMesPagado As Label
-    Friend WithEvents TxtTercerMes As TextBox
-    Friend WithEvents TxtCuartoMes As TextBox
     Friend WithEvents LblPreaviso As Label
     Friend WithEvents CboPreaviso As ComboBox
     Friend WithEvents LblPorcentaje As Label
@@ -1692,24 +1694,24 @@ Partial Class FrmPrestaciones
     Friend WithEvents LblFechaTermi As Label
     Friend WithEvents TxtDia1 As TextBox
     Friend WithEvents LblDia1 As Label
-    Friend WithEvents TxtAñoAnti As TextBox
+    Friend WithEvents TxtAnioAnti As TextBox
     Friend WithEvents LblAñoAnti As Label
     Friend WithEvents TxtMesAnti As TextBox
     Friend WithEvents LblMesAnti As Label
-    Friend WithEvents TxtDiaanti As TextBox
+    Friend WithEvents TxtDiaAnti As TextBox
     Friend WithEvents LblDiaanti As Label
     Friend WithEvents LblTiempoAnti As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents TxtOrdinario As TextBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TxtSOM As TextBox
+    Friend WithEvents TxtSDME As TextBox
     Friend WithEvents LblDiarioExtra As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtSMME As TextBox
     Friend WithEvents LblMensualExtra As Label
-    Friend WithEvents TxtOrdiProDiario As TextBox
+    Friend WithEvents TxtSOPD As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtSOPM As TextBox
     Friend WithEvents LblOrdiProMensual As Label
-    Friend WithEvents TxtDiario As TextBox
+    Friend WithEvents TxtSOD As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LblOrdinario As Label
     Friend WithEvents Panel5 As Panel
@@ -1815,4 +1817,6 @@ Partial Class FrmPrestaciones
     Friend WithEvents PictureBox5 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents MaskedTextBox1 As MaskedTextBox
+    Friend WithEvents MaskedTextBox2 As MaskedTextBox
 End Class
