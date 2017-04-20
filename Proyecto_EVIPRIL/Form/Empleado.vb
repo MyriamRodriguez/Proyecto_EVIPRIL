@@ -85,16 +85,22 @@ Public Class FrmEmpleado
     End Sub
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If txtNumIdentidad.Text = "" Or txtNombre.Text = "" Or txtApellido.Text = "" Or txtDireccion.Text = "" Or txtNumCuenta.Text = "" Or txtTelefono.Text = "" Or cboProfesion.Text = "" Or cboEstadoCivil.Text = "" Then
 
-        AgregarEmpleado()
-        txtNumIdentidad.Clear()
-        txtNombre.Text = ""
-        txtApellido.Text = ""
-        txtTelefono.Text = ""
-        txtDireccion.Text = ""
-        txtNumCuenta.Text = ""
-        cboProfesion.Text = ""
-        cboEstadoCivil.Text = ""
+            MessageBox.Show("Debe llenar el campo.", "EVIPRIL", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            AgregarEmpleado()
+            txtNumIdentidad.Clear()
+            txtNombre.Text = ""
+            txtApellido.Text = ""
+            txtTelefono.Text = ""
+            txtDireccion.Text = ""
+            txtNumCuenta.Text = ""
+            cboProfesion.Text = ""
+            cboEstadoCivil.Text = ""
+        End If
+
+
 
 
     End Sub

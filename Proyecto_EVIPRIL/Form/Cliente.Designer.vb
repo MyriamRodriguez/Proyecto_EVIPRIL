@@ -78,11 +78,10 @@ Partial Class FrmCliente
         '
         'TxtCodigo
         '
-        Me.TxtCodigo.Enabled = False
-        Me.TxtCodigo.Location = New System.Drawing.Point(201, 96)
+        Me.TxtCodigo.Location = New System.Drawing.Point(201, 102)
         Me.TxtCodigo.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtCodigo.Name = "TxtCodigo"
-        Me.TxtCodigo.Size = New System.Drawing.Size(260, 20)
+        Me.TxtCodigo.Size = New System.Drawing.Size(134, 20)
         Me.TxtCodigo.TabIndex = 20
         '
         'TxtDireccion

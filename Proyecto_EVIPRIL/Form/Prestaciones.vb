@@ -16,9 +16,6 @@
         FrmPantallaPrincipal.Show()
     End Sub
 
-    Private Sub TxtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtNumIdentidadEmpleado.KeyDown
-
-    End Sub
 
     Private Sub txtNumIdentidadEmpleado_TextChanged(sender As Object, e As EventArgs) Handles txtNumIdentidadEmpleado.TextChanged
         If Me.txtNumIdentidadEmpleado.TextLength = 13 Then
@@ -118,5 +115,7 @@
         Me.TxtMesAnti.Text = Meses
         Me.TxtDiaAnti.Text = Dias
 
+
     End Sub
+
 End Class

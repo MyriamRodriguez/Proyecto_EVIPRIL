@@ -66,7 +66,8 @@ Public Class FrmPlanilla
                     .Parameters.Add("@OtrasDeducciones", SqlDbType.Int).Value = TxtSueldoDiario.Text
                     .Parameters.Add("@TotalDeducciones", SqlDbType.Int).Value = TxtDiasTrabajados.Text
                     .Parameters.Add("@NetoPagar", SqlDbType.Int).Value = TxtSueldoQ.Text
-                    .Parameters.Add("@NumIdentidad", SqlDbType.Int).Value = TxtComplemento.Text
+                    .Parameters.Add("@NumIdentidad", SqlDbType.Char).Value = TxtNumIdentidad.Text.Trim
+                    .Parameters.Add("@IdControlEmp", SqlDbType.Int).Value = TxtCodigo.Text
                     .ExecuteNonQuery()
                     MsgBox("Guardado con éxito")
                 End With
@@ -119,4 +120,6 @@ Public Class FrmPlanilla
         End If
         Return estado
     End Function
+
+
 End Class
